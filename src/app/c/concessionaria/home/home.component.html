@@ -1,0 +1,35 @@
+<section>
+    <div class="banner">
+        <img src="../../../../assets/home/Rectangle 7.png" alt="">
+    </div>
+    <div class="containerMarcas">
+        <div class="tituloMarcas">
+            <h1>
+                {{titulos['home'].textoMarca}}
+            </h1>
+        </div>
+        <div class="containerCardMarcas">
+            <ng-container *ngFor="let m of marcas">
+                <app-card [imgCard]="m.imagem"
+                [classCard]="'cardMarcas'" [textCard]="m.marca"
+                [rotaCard]="'/concessionaria/page/interna/marcas/'+ m.id"></app-card>
+            </ng-container>
+            
+        </div>
+    </div>
+    <div class="containerModelos">
+        <div class="tituloModelos">
+            <h1>
+                {{titulos['home'].textoModelo}}
+            </h1>
+        </div>
+        <div class="containerCardModelos">
+             <ng-container *ngFor=" let c of modelos">
+            <app-card [imgCard]="c.imagem"
+            [classCard]="'cardModelos'" [textCard]="c.modelo" 
+            [rotaCard]="'/concessionaria/page/interna/modelos/' + c.id"></app-card>
+        </ng-container> 
+        </div>
+    </div>
+</section>
+

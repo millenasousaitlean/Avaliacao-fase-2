@@ -1,0 +1,489 @@
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .parte1 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .imgGaleri {
+            display: flex;
+            flex-direction: column;
+            width: 35%;
+            margin-top: 40px;
+
+
+            img {
+                width: 400px;
+                height: 300px;
+                padding: 0px 0px 50px 50px;
+            }
+        }
+
+        .infosCar {
+            width: 65%;
+            margin-top: 40px;
+            margin-left: 30px;
+
+            .infosCarValorName {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+                height: 220px;
+
+                .infosNameCar {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+
+                    .carTipo {
+
+                        h1 {
+                            font-family: 'inter';
+                            font-size: 32px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .carPotencia {
+
+                        h1 {
+                            font-family: 'inter';
+                            font-size: 30px;
+                            font-weight: 700;
+                            color: #FF7A00;
+                        }
+
+                        h3 {
+                            font-family: 'inter';
+                            font-size: 17px;
+                            font-weight: 600;
+                            color: black;
+                        }
+                    }
+                }
+
+                .infosValores {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: end;
+                    justify-content: right;
+                    gap: 35px;
+                    // line-height: 2.5;
+
+                    h1 {
+                        font-family: 'inter';
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: #FF7A00;
+                    }
+
+                    h3 {
+                        font-family: 'inter';
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: black;
+                    }
+                }
+
+
+            }
+
+            .menuInfos {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                width: 90%;
+                border: 1px solid #FF7A00;
+                border-radius: 12px;
+                padding: 20px;
+                margin-top: 70px;
+
+
+
+                h3 {
+                    font-family: 'inter';
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+
+                .ano {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                }
+
+                .quilometragem {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                }
+
+                .cambio {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                }
+
+                .cor {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                }
+
+                .combustivel {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                }
+
+                .carroceria {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                }
+            }
+
+
+
+            .infosCarroceria {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 93%;
+                margin-top: 80px;
+
+                h2 {
+                    font-family: 'inter';
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
+
+                .motor {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 7px;
+
+                }
+
+                .portas {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 7px;
+                }
+
+                .placa {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 7px;
+                }
+
+            }
+
+            .listaEspecificacao {
+                width: 100%;
+                margin-top: 60px;
+                margin-left: -50px;
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    gap: 20px;
+                    // max-height: 250px;
+
+
+                    li {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 20px;
+
+                        .li {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 10px;
+                            width: 250px;
+                            font-family: 'inter';
+                            line-height: 1.5;
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: black;
+
+                            img {
+                                width: 35px;
+                                height: 30px
+                            }
+
+                            ;
+                        }
+
+
+                    }
+                }
+            }
+
+            .btnSimulacao {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .maisModelos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 50px;
+
+        .tituloMais {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+
+            h1 {
+                font-family: 'inter';
+                font-size: 30px;
+                font-weight: 500;
+                color: black;
+            }
+        }
+
+        .containerCards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+
+    }
+
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #212121d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+
+    .containerModal {
+        background-color: #ffffff;
+        width: 50%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+
+
+        h4 {
+            position: relative;
+            left: 96%;
+            top: 2%;
+            font-family: 'inter';
+            font-size: 20px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .tituloModal {
+            text-align: center;
+            font-family: 'inter';
+            font-size: 20px;
+        }
+
+        .btnModal {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .compra {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 95%;
+            margin-top: 30px;
+
+
+            .selectCompra {
+                width: 90%;
+
+                h2 {
+                    font-family: 'inter';
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                select {
+                    width: 60px;
+                    height: 23px;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                }
+            }
+
+            .scroolTable {
+                margin-right: -50px;
+                width: 95%;
+                max-height: 250px;
+                overflow-y: auto;
+
+
+                .tabelaCompra {
+                    width: 95%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 10px;
+                    // max-height: 200px;
+                    // overflow-y: scroll;
+
+                    table {
+                        width: 100%;
+                        margin-top: 25px;
+                        border-collapse: collapse;
+
+
+
+                        tr {
+                            text-align: center;
+
+
+
+                            th {
+                                font-family: 'inter';
+                                font-size: 17px;
+                                font-weight: 600;
+                                color: black;
+                                border-bottom: 1px solid black;
+
+                            }
+                        }
+
+
+
+
+                        tr {
+                            text-align: center;
+                            border: #FF7A00;
+
+
+
+                            td {
+                                font-family: 'inter';
+                                font-size: 15px;
+                                font-weight: 400;
+                                line-height: 3;
+                                color: black;
+                                border-bottom: 1px solid rgb(0, 0, 0);
+
+                            }
+                        }
+
+
+                        // }
+                    }
+
+                }
+            }
+
+            .valorTotal {
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                h2 {
+                    margin-top: 30px;
+                    text-align: right;
+                    font-family: 'inter';
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-bottom: 30px;
+
+                }
+            }
+
+
+        }
+
+        .aluguel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 95%;
+            margin-top: 30px;
+
+            .inputAluguel {
+                width: 90%;
+
+                h2 {
+                    font-family: 'inter';
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                input {
+                    width: 50px;
+                    height: 20px;
+                }
+
+                h3 {
+                    margin-top: 50px;
+                    font-family: 'inter';
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+
+                .valores {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+            }
+
+        }
+
+    }
+}

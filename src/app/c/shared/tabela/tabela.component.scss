@@ -1,0 +1,33 @@
+.section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+      
+
+    table{ 
+        width: 100%;
+        margin: 10px;
+                
+        th{
+            width: 100%;
+            font-family: 'inter';
+            font-size: 18px;
+            font-weight: 600;
+
+        }
+
+        td{
+            width: 100%;
+            padding: 8px;
+            background-color: rgb(0, 0, 0);
+            font-family: 'inter';
+            font-size: 15px;
+            font-weight: 400;
+
+            
+        }
+    }
+}

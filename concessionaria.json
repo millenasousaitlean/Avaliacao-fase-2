@@ -1,0 +1,1183 @@
+{
+  "carros": [
+    {
+      "id": 1,
+      "marca": 1,
+      "modelo": 1,
+      "ano": 2021,
+      "textoAnuncio": "Argo 1.0",
+      "complementoAnuncio": "Argo Drive 1.0 4p",
+      "quilometragem": 78330,
+      "cambio": "Manual",
+      "cor": "Branco",
+      "combustivel": "Gasolina/Etanol",
+      "categoria": "Hatch",
+      "motor": "1.0",
+      "portas": 4,
+      "finalPlaca": 1,
+      "acessorios": [
+        "Alarme", "Direção elétrica", "Vidros elétricos", "Freio ABS", "Ar-Condicionado", "Computador de bordo", "Sensor de estacionamento", "Airbag duplo"
+      ],
+      "valores": {
+        "compra": 54900,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.25,
+        "aluguelDia": 72.97,
+        "aluguelMes": 1751.28
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230630/fiat-argo-1.0-firefly-flex-manual-wmimagem10385678167.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230708/fiat-argo-1.0-firefly-flex-manual-wmimagem16152378210.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230630/fiat-argo-1.0-firefly-flex-manual-wmimagem10390072337.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 2,
+      "marca": 1,
+      "modelo": 2,
+      "ano": 2023,
+      "textoAnuncio": "Fastback 1.3",
+      "complementoAnuncio": "Fastback 1.3 TURBO 270 FLEX LIMITED EDITION AT6",
+      "quilometragem": 5000,
+      "cambio": "Automático",
+      "cor": "Preto",
+      "combustivel": "Gasolina/Álcool",
+      "categoria": "Utilitário esportivo",
+      "motor": "1.3",
+      "portas": 4,
+      "finalPlaca": 4,
+      "acessorios": [
+        "Alarme", "Ar quente", "Computador de bordo", "Ar condicionado", "Freio ABS", "Limpador traseiro", "Travas elétricas", "Vidros elétricos", "Bancos em couro", "GPS"
+      ],
+      "valores": {
+        "compra": 218900,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.75,
+        "aluguelDia": 120.90,
+        "aluguelMes": 2801.30
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230706/fiat-fastback-1.3-turbo-270-flex-limited-edition-at6-wmimagem10533978579.jpg?s=fill&w=552&h=414&q=60",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230706/fiat-fastback-1.3-turbo-270-flex-limited-edition-at6-wmimagem10544917488.jpg?s=fill&w=552&h=414&q=60",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230706/fiat-fastback-1.3-turbo-270-flex-limited-edition-at6-wmimagem1054578120.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 3,
+      "marca": 2,
+      "modelo": 3,
+      "ano": 2020,
+      "textoAnuncio": "S10 2.8",
+      "complementoAnuncio": "2.8 16V TURBO DIESEL LTZ CD 4X4 AUTOMÁTICO",
+      "quilometragem": 34.310,
+      "cambio": "Automático",
+      "cor": "Branco",
+      "combustivel": "Diesel",
+      "categoria": "Picape",
+      "motor": "2.8",
+      "portas": 4,
+      "finalPlaca": 5,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", 
+        "Desembaçador traseiro", "Ar condicionado", "Encosto de cabeça traseiro", "Freio ABS", "Protetor de caçamba", 
+        "Rádio", "Retrovisores elétricos", "Rodas de liga leve", "Sensor de chuva", "Travas elétricas", "Vidros elétricos",
+        "Volante com regulagem de altura", "Capota marítima", "Direção hidráulica"
+      ],
+      "valores": {
+        "compra": 209990,
+        "parcelasMaximas": 9,
+        "jurosMensais": 1.50,
+        "aluguelDia": 140.30,
+        "aluguelMes": 2990.95
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230626/chevrolet-s10-2.8-16v-turbo-diesel-ltz-cd-4x4-automatico-wmimagem12194856726.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230626/chevrolet-s10-2.8-16v-turbo-diesel-ltz-cd-4x4-automatico-wmimagem12200554762.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230626/chevrolet-s10-2.8-16v-turbo-diesel-ltz-cd-4x4-automatico-wmimagem12195578948.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 4,
+      "marca": 2,
+      "modelo": 4,
+      "ano": 2023,
+      "textoAnuncio": "Camaro SS 6.2",
+      "complementoAnuncio": "Camaro SS 2023 6.2 V8 de 461 cv e torque de 62,9  ",
+      "quilometragem": 0,
+      "cambio": "Manual",
+      "cor": "Branco",
+      "combustivel": "Gasolina",
+      "categoria": "Esportivo",
+      "motor": "6.2",
+      "portas": 2,
+      "finalPlaca": 1,
+      "acessorios": [
+       "8 Airbags", "Freios de competição", "Alerta de movimentação traseira", "Alerta de ponto cego", "quatro pistões Brembo ", 
+       "sensor de aproximação repentina", "Controles de tração e estabilidade", "Projeção no para-brisa", "Retrovisor interno com câmera", "Modos de condução", "Spotify nativo", "wi-fi nativo"
+      ],
+      "valores": {
+        "compra": 518800,
+        "parcelasMaximas": 6,
+        "jurosMensais": 1.34,
+        "aluguelDia": 457.60,
+        "aluguelMes": 4950.75
+      },
+      "imagens": [
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1_Pf2Epamwh39OWj1k6PGjEYC7pzi3aAQqw9RLNE7wvZp88tCVZ4g5FygXUid3BGMfPkidGZYPKbHTHxBqqIv0vv0jKKj-d3cPA9oIV1xgToqKonVq8iulW4V_nPa4oj0YHwogOfcV6IwcgR8ILopNr0LjC0Y-E0uZ-t_k9fQwTOJf6sTpJ4WdiLnaA/s600/Camaro-SS-2023%20%284%29.jpg",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipXeFnPmSYgU01VJSzWC548eHnQ5kvJc9zYAzFnDtk-j9mRoWrtiuPlr0GohLGQpVbUji87yVG-M8xNL2c5A35QTXFDkcLLHY8hveqTINty1zgMCbs-4OgMv0dwzZ7prip6CH1Nx6jwA2szIP67_hd4HvUF2VoCAjNH4XTTuNdJhdcx3kGswbaat4e3Q/s600/Camaro-SS-2023%20%2812%29.jpg",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHY4OqHZOud9er4ckXKfmFvMlO8sV4Q_ANDmQKaNjsg30R3h7Bw87-nz2sicCjn4dipvxJVrarj7ZidSYSDHInHR1yMp6t_bcKDmA53rQOWKra_UdvMmzsWI21eUPz-acbHUlXyDFtnPKFYkvcFgQl5tuf5csP6GFAOR4TNsV0PXb4mw15igZhQTe_ew/s2560/Camaro-SS-2023%20%2817%29.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "marca": 3,
+      "modelo": 5,
+      "ano": 2021,
+      "textoAnuncio": "Z4 3.0",
+      "complementoAnuncio": "Z4 3.0 TWINPOWER M40I STEPTRONIC",
+      "quilometragem": 20700,
+      "cambio": "Automático",
+      "cor": "Branco",
+      "combustivel": "Gasolina",
+      "categoria": "conversível",
+      "motor": "3.0",
+      "portas": 2,
+      "finalPlaca": 3,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Retrovisores elétricos", "Rodas de liga leve", "Travas elétricas", "Vidros elétricos", "Volante com regulagem de altura", "Bancos em couro", "GPS"
+      ],
+      "valores": {
+        "compra": 499000,
+        "parcelasMaximas": 16,
+        "jurosMensais": 0.95,
+        "aluguelDia": 389.90,
+        "aluguelMes": 3890.95
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230624/bmw-z4-3.0-twinpower-gasolina-m40i-steptronic-wmimagem09284230032.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230624/bmw-z4-3.0-twinpower-gasolina-m40i-steptronic-wmimagem09284291530.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230624/bmw-z4-3.0-twinpower-gasolina-m40i-steptronic-wmimagem09284350548.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 6,
+      "marca": 3,
+      "modelo": 6,
+      "ano": 2021,
+      "textoAnuncio": "320i 2.0",
+      "complementoAnuncio": "320i 2.0 16V TURBO ",
+      "quilometragem": 19000,
+      "cambio": "Automático",
+      "cor": "Azul",
+      "combustivel": "Gasolina",
+      "categoria": "Cupê",
+      "motor": "2.0",
+      "portas": 4,
+      "finalPlaca": 1,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Ar condicionado", "Encosto de cabeça traseiro", "Freio ABS", "Limpador traseiro", "Controle automático de velocidade", "Retrovisores elétricos", "Rodas de liga leve", "Sensor de chuva", "Sensor de estacionamento", "Rádio e toca fitas", "Travas elétricas", "Vidros elétricos", "Volante com regulagem de altura", "Bancos em couro"
+      ],
+      "valores": {
+        "compra": 219900,
+        "parcelasMaximas": 16,
+        "jurosMensais": 2.15,
+        "aluguelDia": 245.60,
+        "aluguelMes": 3551.28
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230729/bmw-320i-2.0-16v-turbo-gasolina-gp-automatico-wmimagem12472245719.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230729/bmw-320i-2.0-16v-turbo-gasolina-gp-automatico-wmimagem12472329961.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230729/bmw-320i-2.0-16v-turbo-gasolina-gp-automatico-wmimagem1247251985.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 7,
+      "marca": 4,
+      "modelo": 7,
+      "ano": 2022,
+      "textoAnuncio": "URUS 4.0",
+      "complementoAnuncio": "URUS 4.0 V8 TURBO LP650-4",
+      "quilometragem": 3800,
+      "cambio": "Automático",
+      "cor": "Preto",
+      "combustivel": "Gasolina",
+      "categoria": "Utilitário esportivo",
+      "motor": "4.0",
+      "portas": 4,
+      "finalPlaca": 1,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "CD Player", "Computador de bordo", "Controle de tração", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Rodas de liga leve", "Sensor de estacionamento", "Travas elétricas", "Vidros elétricos", "Bancos em couro", "GPS"
+      ],
+      "valores": {
+        "compra": 4350000,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.75,
+        "aluguelDia": 754.95,
+        "aluguelMes": 6554.65
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230617/lamborghini-urus-4.0-v8-turbo-gasolina-lp6504-automatico-wmimagem0106205109.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230617/lamborghini-urus-4.0-v8-turbo-gasolina-lp6504-automatico-wmimagem01060305081.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230617/lamborghini-urus-4.0-v8-turbo-gasolina-lp6504-automatico-wmimagem01062424848.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 8,
+      "marca": 4,
+      "modelo": 8,
+      "ano": 2018,
+      "textoAnuncio": "AVENTADOR 6.5",
+      "complementoAnuncio": "AVENTADOR 6.5 V12 LP 740-4 S ISR",
+      "quilometragem": 2900,
+      "cambio": "Automático",
+      "cor": "Verde",
+      "combustivel": "Gasolina",
+      "categoria": "Esportivo",
+      "motor": "6.5",
+      "portas": 2,
+      "finalPlaca": 0,
+      "acessorios": [
+        "PPF Full", "Sistema de escapamento esportivo Fi Exhaust", "Pacote em Fibra de carbono interna e externa", "interior em couro e Alcântara com detalhes em vermelho", "Rodas de cubo rápido", "Discos de freio em Carbono Cerâmica"
+      ],
+      "valores": {
+        "compra": 6500000,
+        "parcelasMaximas": 10,
+        "jurosMensais": 2.25,
+        "aluguelDia": 1050.25,
+        "aluguelMes": 12554.25
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202301/20230123/lamborghini-aventador-6.5-v12-gasolina-lp-7404-s-isr-wmimagem12150157119.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202301/20230123/lamborghini-aventador-6.5-v12-gasolina-lp-7404-s-isr-wmimagem12150630640.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202301/20230123/lamborghini-aventador-6.5-v12-gasolina-lp-7404-s-isr-wmimagem12150575942.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 9,
+      "marca": 5,
+      "modelo": 9,
+      "ano": 2022,
+      "textoAnuncio": "MC20 3.0",
+      "complementoAnuncio": "Mc20 3.0 V6 BITURBO DCT",
+      "quilometragem": 101,
+      "cambio": "Automático",
+      "cor": "Cinza",
+      "combustivel": "Gasolina",
+      "categoria": "Esportivo",
+      "motor": "3.0",
+      "portas": 2,
+      "finalPlaca": 0,
+      "acessorios": [
+        "cambio automático de 8 marchas", "modos Wet", "GT", "Sport", "e Corsa", "Launch Control", "amortecedores ajustáveis", "Lifting System", "portas diédricas", "interior em couro e Alcantara" , "painel de instrumentos em TFT de 10,2”", "ar condicionado digital Dual Zone"
+      ],
+      "valores": {
+        "compra": 2890000,
+        "parcelasMaximas": 20,
+        "jurosMensais": 2.75,
+        "aluguelDia": 950.75,
+        "aluguelMes": 8369.75
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202302/20230204/maserati-mc20-3.0-v6-biturbo-gasolina-dct-wmimagem17442995350.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202302/20230204/maserati-mc20-3.0-v6-biturbo-gasolina-dct-wmimagem17473538448.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202302/20230204/maserati-mc20-3.0-v6-biturbo-gasolina-dct-wmimagem17442891639.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 10,
+      "marca": 5,
+      "modelo": 10,
+      "ano": 2017,
+      "textoAnuncio": "LEVANTE 3.0",
+      "complementoAnuncio": "LEVANTE 3.0 V6 TURBO S Q4",
+      "quilometragem": 34000,
+      "cambio": "Automático",
+      "cor": "Azul",
+      "combustivel": "Gasolina",
+      "categoria": "Utilitário esportivo",
+      "motor": "3.0",
+      "portas": 4,
+      "finalPlaca": 7,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Desembaçador traseiro", "Ar condicionado", "Encosto de cabeça traseiro", "Freio ABS", "Limpador traseiro", "Controle automático de velocidade", "Rádio", "Retrovisores elétricos", "Rodas de liga leve", "Sensor de chuva", "Sensor de estacionamento", "Teto solar", "Retrovisor fotocrômico", "Travas elétricas", "Vidros elétricos", "Volante com regulagem de altura", "Bancos em couro", "Tração 4x4"
+      ],
+      "valores": {
+        "compra": 590000,
+        "parcelasMaximas": 18,
+        "jurosMensais": 1.35,
+        "aluguelDia": 950.75,
+        "aluguelMes": 9854.35
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230615/maserati-levante-3.0-v6-turbo-gasolina-s-q4-automatico-wmimagem08325139318.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230615/maserati-levante-3.0-v6-turbo-gasolina-s-q4-automatico-wmimagem08332648659.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230615/maserati-levante-3.0-v6-turbo-gasolina-s-q4-automatico-wmimagem08325074893.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 11,
+      "marca": 6,
+      "modelo": 11,
+      "ano": 2021,
+      "textoAnuncio": "MUSTANG 5.0",
+      "complementoAnuncio": "MUSTANG 5.0 V8 TI-VCT MACH 1 SELECTSHIFT",
+      "quilometragem": 8341,
+      "cambio": "Automatico",
+      "cor": "Cinza",
+      "combustivel": "Gasolina",
+      "categoria": "Cupê",
+      "motor": "5.0",
+      "portas": 2,
+      "finalPlaca": 7,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Desembaçador traseiro", "Ar condicionado", "Freio ABS", "Rádio", "Rodas de liga leve", "Sensor de chuva", "Sensor de estacionamento", "Travas elétricas",  "Vidros elétricos", "Volante com regulagem de altura", "Bancos em couro", "Farol de xenônio", "Direção hidráulica"
+      ],
+      "valores": {
+        "compra": 488800,
+        "parcelasMaximas": 14,
+        "jurosMensais": 1.85,
+        "aluguelDia": 350.65,
+        "aluguelMes": 2450.78
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230621/ford-mustang-5.0-v8-tivct-gasolina-mach-1-selectshift-wmimagem15310141845.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230621/ford-mustang-5.0-v8-tivct-gasolina-mach-1-selectshift-wmimagem15314753664.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230621/ford-mustang-5.0-v8-tivct-gasolina-mach-1-selectshift-wmimagem15304828994.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 12,
+      "marca": 6,
+      "modelo": 12,
+      "ano": 2020,
+      "textoAnuncio": "RANGER 3.2",
+      "complementoAnuncio": "RANGER 3.2 XLT 4X4 CD 20V 4P",
+      "quilometragem": 236000,
+      "cambio": "Automatico",
+      "cor": "Branco",
+      "combustivel": "Diesel",
+      "categoria": "Picape",
+      "motor": "3.2",
+      "portas": 4,
+      "finalPlaca": 3,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Computador de bordo", "Controle de tração", "Freio ABS", "Protetor de caçamba", "Rádio", "Retrovisores elétricos", "Rodas de liga leve", "Sensor de estacionamento", "Travas elétricas", "Vidros elétricos", "Volante com regulagem de altura", "Capota marítima", "Bancos em couro", "Tração 4x4", "GPS"
+      ],
+      "valores": {
+        "compra": 208900,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.75,
+        "aluguelDia": 189.56,
+        "aluguelMes": 2800.75
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230630/ford-ranger-3.2-xlt-4x4-cd-20v-diesel-4p-automatico-wmimagem16070058168.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230630/ford-ranger-3.2-xlt-4x4-cd-20v-diesel-4p-automatico-wmimagem16073557635.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230630/ford-ranger-3.2-xlt-4x4-cd-20v-diesel-4p-automatico-wmimagem16064489236.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 13,
+      "marca": 7,
+      "modelo": 13,
+      "ano": 2023,
+      "textoAnuncio": "CAYENNE 3.0",
+      "complementoAnuncio": "CAYENNE 3.0 V6 E-HYBRID COUPÉ PLATINUM EDITION AWD TIPTRONIC S",
+      "quilometragem": 0,
+      "cambio": "Automatico",
+      "cor": "Branco",
+      "combustivel": "Gasolina/Eletrico",
+      "categoria": "Utilitário esportivo",
+      "motor": "3.0",
+      "portas": 4,
+      "finalPlaca": 0,
+      "acessorios": [
+      "  Airbag", "Alarme", "Ar quente", "Bancos dianteiros com aquecimento", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Desembaçador traseiro", "Ar condicionado", "Encosto de cabeça traseiro", "Freio ABS", "Limpador traseiro", "Controle automático de velocidade", "Retrovisores elétricos", "Rodas de liga leve", "Sensor de chuva",  "Sensor de estacionamento", "Teto solar", "Retrovisor fotocrômico", "Travas elétricas", "Vidros elétricos", "Volante com regulagem de altura", "Bancos em couro", "Tração 4x4", "Direção hidráulica","GPS"
+      ],
+      "valores": {
+        "compra": 1250000,
+        "parcelasMaximas": 10,
+        "jurosMensais": 1.15,
+        "aluguelDia": 930.54,
+        "aluguelMes": 9514.51
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230719/porsche-cayenne-3.0-v6-ehybrid-coupe-platinum-edition-awd-tiptronic-s-wmimagem18161104927.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230719/porsche-cayenne-3.0-v6-ehybrid-coupe-platinum-edition-awd-tiptronic-s-wmimagem18161682316.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230719/porsche-cayenne-3.0-v6-ehybrid-coupe-platinum-edition-awd-tiptronic-s-wmimagem18161448012.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 14,
+      "marca": 7,
+      "modelo": 14,
+      "ano": 2018,
+      "textoAnuncio": "MACAN 2.0",
+      "complementoAnuncio": "MACAN 2.0 16V 4P",
+      "quilometragem": 29327,
+      "cambio": "Automatico",
+      "cor": "Cinza",
+      "combustivel": "Gasolina",
+      "categoria": "Utilitário esportivo",
+      "motor": "2.0",
+      "portas": 4,
+      "finalPlaca": 5,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Bancos dianteiros com aquecimento", "Banco com regulagem de altura", "Computador de bordo", "Desembaçador traseiro", "Ar condicionado", "Encosto de cabeça traseiro", "Freio ABS", "Limpador traseiro", "Controle automático de velocidade", "Retrovisores elétricos", "Rodas de liga leve", "Sensor de estacionamento", "Teto solar", "Travas elétricas", "Vidros elétricos", "Volante com regulagem de altura", "Bancos em couro", "Direção hidráulica", "GPS"
+      ],
+      "valores": {
+        "compra": 339000,
+        "parcelasMaximas": 16,
+        "jurosMensais": 1.05,
+        "aluguelDia": 320.75,
+        "aluguelMes": 1750.35
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230731/porsche-macan-2.0-16v-gasolina-4p-automatico-wmimagem10082872527.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230731/porsche-macan-2.0-16v-gasolina-4p-automatico-wmimagem10083113412.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230731/porsche-macan-2.0-16v-gasolina-4p-automatico-wmimagem10082928632.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 15,
+      "marca": 8,
+      "modelo": 15,
+      "ano": 2020,
+      "textoAnuncio": "Q3 1.4",
+      "complementoAnuncio": "Q3 1.4 35 TFSI PRESTIGE PLUS S TRONIC",
+      "quilometragem": 59900,
+      "cambio": "Automatico",
+      "cor": "Preto",
+      "combustivel": "Gasolina",
+      "categoria": "Utilitário esportivo",
+      "motor": "1.4",
+      "portas": 4,
+      "finalPlaca": 5,
+      "acessorios": [
+        "Airbag", "Computador de bordo", "Ar condicionado", "Freio ABS", "Rodas de liga leve", "Travas elétricas", "Vidros elétricos", 
+"Bancos em couro"
+      ],
+      "valores": {
+        "compra": 179990,
+        "parcelasMaximas": 20,
+        "jurosMensais": 1.65,
+        "aluguelDia": 235.89,
+        "aluguelMes": 4780.28
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230712/audi-q3-1.4-35-tfsi-gasolina-prestige-plus-s-tronic-wmimagem13371159151.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230712/audi-q3-1.4-35-tfsi-gasolina-prestige-plus-s-tronic-wmimagem13372018494.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230712/audi-q3-1.4-35-tfsi-gasolina-prestige-plus-s-tronic-wmimagem13365869015.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 16,
+      "marca": 8,
+      "modelo": 16,
+      "ano": 2021,
+      "textoAnuncio": "R8 5.2",
+      "complementoAnuncio": "R8 5.2 V10 FSI COUPÉ QUATTRO S TRONIC",
+      "quilometragem": 452,
+      "cambio": "Automatico",
+      "cor": "Amarelo",
+      "combustivel": "Gasolina",
+      "categoria": "Cupê",
+      "motor": "5.2",
+      "portas": 2,
+      "finalPlaca": 0,
+      "acessorios": [
+        "Airbag", "Alarme", "Bancos dianteiros com aquecimento", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Retrovisores elétricos", "Rodas de liga leve", "Sensor de estacionamento", "Retrovisor fotocrômico", "Travas elétricas", "Vidros elétricos", "Tração 4x4", "GPS"
+      ],
+      "valores": {
+        "compra": 1800000,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.85,
+        "aluguelDia": 989.90,
+        "aluguelMes": 11650.78
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230728/audi-r8-5.2-v10-fsi-gasolina-coupe-quattro-s-tronic-wmimagem08471598541.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230728/audi-r8-5.2-v10-fsi-gasolina-coupe-quattro-s-tronic-wmimagem08472251973.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230728/audi-r8-5.2-v10-fsi-gasolina-coupe-quattro-s-tronic-wmimagem08471662928.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 17,
+      "marca": 9,
+      "modelo": 17,
+      "ano": 2016,
+      "textoAnuncio": "C 180 1.6",
+      "complementoAnuncio": "C 180 1.6 CGI AVANTGARDE 7G-TRONIC",
+      "quilometragem": 84000,
+      "cambio": "Automatico",
+      "cor": "Cinza",
+      "combustivel": "Gasolina/Álcool",
+      "categoria": "Sedã",
+      "motor": "1.6",
+      "portas": 4,
+      "finalPlaca": 6,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Computador de bordo", "Desembaçador traseiro", "Ar condicionado", "Encosto de cabeça traseiro", "Freio ABS", "Rádio", "Retrovisores elétricos", "Rodas de liga leve", "Travas elétricas", "Vidros elétricos",        "Bancos em couro", "Direção hidráulica"
+      ],
+      "valores": {
+        "compra": 118900,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.15,
+        "aluguelDia": 240.35,
+        "aluguelMes": 2550.54
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230721/mercedesbenz-c-180-1.6-cgi-flex-avantgarde-7gtronic-wmimagem12385477393.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230721/mercedesbenz-c-180-1.6-cgi-flex-avantgarde-7gtronic-wmimagem12390721193.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230721/mercedesbenz-c-180-1.6-cgi-flex-avantgarde-7gtronic-wmimagem12392396592.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 18,
+      "marca": 9,
+      "modelo": 18,
+      "ano": 2019,
+      "textoAnuncio": "G 63 AMG 4.0",
+      "complementoAnuncio": "G 63 AMG 4.0 V8 TURBO 4MATIC SPEEDSHIFT",
+      "quilometragem": 28225,
+      "cambio": "Automatico",
+      "cor": "Verde",
+      "combustivel": "Gasolina",
+      "categoria": "Utilitário esportivo",
+      "motor": "4.0",
+      "portas": 4,
+      "finalPlaca": 4,
+      "acessorios": [
+        "Motor V8 Biturbo com 585cv", "Interior total couro premium Bege Macchiato", "Acabamento em black piano", "Detalhes em aço escovado", "Bancos com ajuste elétrico", "lombar", "aquecimento", "ventilação", "massagem e pacote de memória", "Assentos traseiros com ajuste e aquecimento", "Volante multifuncional em couro com Paddle Shift", "Sistema de som Burmester", "Faróis Full Leds"
+      ],
+      "valores": {
+        "compra": 1890000,
+        "parcelasMaximas": 20,
+        "jurosMensais": 1.67,
+        "aluguelDia": 980.54,
+        "aluguelMes": 11348.80
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230703/mercedesbenz-g-63-amg-4.0-v8-turbo-gasolina-4matic-speedshift-wmimagem16344144423.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230703/mercedesbenz-g-63-amg-4.0-v8-turbo-gasolina-4matic-speedshift-wmimagem16394476886.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230703/mercedesbenz-g-63-amg-4.0-v8-turbo-gasolina-4matic-speedshift-wmimagem16344678385.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 19,
+      "marca": 10,
+      "modelo": 19,
+      "ano": 2017,
+      "textoAnuncio": "XF 2.0",
+      "complementoAnuncio": "XF 2.0 R-SPORT TURBOCHARGED GASOLINA 4P",
+      "quilometragem": 78330,
+      "cambio": "Automatico",
+      "cor": "Vermelho",
+      "combustivel": "Gasolina",
+      "categoria": "Sedã",
+      "motor": "2.0",
+      "portas": 4,
+      "finalPlaca": 0,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Banco com regulagem de altura", "CD Player", "Computador de bordo", "Controle de tração",     "Desembaçador traseiro", "Ar condicionado", "Encosto de cabeça traseiro", "Freio ABS", "Controle automático de velocidade",     "Retrovisores elétricos", "Rodas de liga leve", "Sensor de chuva", "Sensor de estacionamento", "Teto solar", "Retrovisor fotocrômico"
+      ],
+      "valores": {
+        "compra": 216000,
+        "parcelasMaximas": 18,
+        "jurosMensais": 1.26,
+        "aluguelDia": 197.50,
+        "aluguelMes": 2350.48
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2022/202205/20220524/jaguar-xf-2.0-rsport-turbocharged-gasolina-4p-automatico-wmimagem19344484563.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2022/202205/20220524/jaguar-xf-2.0-rsport-turbocharged-gasolina-4p-automatico-wmimagem20000933868.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2022/202205/20220524/jaguar-xf-2.0-rsport-turbocharged-gasolina-4p-automatico-wmimagem19350799091.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 20,
+      "marca": 10,
+      "modelo": 20,
+      "ano": 2017,
+      "textoAnuncio": "F-PACE 3.0",
+      "complementoAnuncio": "F-PACE 3.0 V6 SUPERCHARGED S AWD 4P",
+      "quilometragem": 56000,
+      "cambio": "Automatico",
+      "cor": "Preto",
+      "combustivel": "Gasolina",
+      "categoria": "Utilitário esportivo",
+      "motor": "3.0",
+      "portas": 4,
+      "finalPlaca": 1,
+      "acessorios": [
+        "Airbag", "Alarme", "Bancos dianteiros com aquecimento", "Banco com regulagem de altura", "Desembaçador traseiro", "Encosto de cabeça traseiro", "Freio ABS", "Limpador traseiro", "Rodas de liga leve", "Sensor de estacionamento", "Travas elétricas", "Vidros elétricos", "Volante com regulagem de altura", "Bancos em couro", "Tração 4x4"
+      ],
+      "valores": {
+        "compra": 280000,
+        "parcelasMaximas": 18,
+        "jurosMensais": 1.67,
+        "aluguelDia": 317.45,
+        "aluguelMes": 4550.24
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230715/jaguar-fpace-3.0-v6-supercharged-s-awd-4p-automatico-wmimagem09500375838.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230715/jaguar-fpace-3.0-v6-supercharged-s-awd-4p-automatico-wmimagem09500729231.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230715/jaguar-fpace-3.0-v6-supercharged-s-awd-4p-automatico-wmimagem09500539512.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 21,
+      "marca": 11,
+      "modelo": 21,
+      "ano": 2022,
+      "textoAnuncio": "VANTAGE 4.0",
+      "complementoAnuncio": "VANTAGE 4.0 V8 TURBO COUPÉ",
+      "quilometragem": 1300,
+      "cambio": "Automatico",
+      "cor": "Laranja",
+      "combustivel": "Gasolina",
+      "categoria": "Cupê",
+      "motor": "4.0",
+      "portas": 2,
+      "finalPlaca": 2,
+      "acessorios": [
+        "Airbag", "Alarme", "Ar quente", "Bancos dianteiros com aquecimento", "Banco com regulagem de altura", "Computador de bordo","Controle de tração", "Desembaçador traseiro", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Retrovisores elétricos", "Rodas de liga leve", "Sensor de estacionamento", "Retrovisor fotocrômico", "Travas elétricas", "Vidros elétricos", "Volante com regulagem de altura", "Bancos em couro", "GPS"
+      ],
+      "valores": {
+        "compra": 2250000,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.85,
+        "aluguelDia": 0,
+        "aluguelMes": 0
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202305/20230522/aston-martin-vantage-4.0-v8-turbo-gasolina-coupe-automatico-wmimagem14263327537.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202305/20230522/aston-martin-vantage-4.0-v8-turbo-gasolina-coupe-automatico-wmimagem14263850063.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202305/20230522/aston-martin-vantage-4.0-v8-turbo-gasolina-coupe-automatico-wmimagem14263470413.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 22,
+      "marca": 11,
+      "modelo": 21,
+      "ano": 2011,
+      "textoAnuncio": "VANTAGE 4.7",
+      "complementoAnuncio": "VANTAGE 4.7 V8 32V 2P",
+      "quilometragem": 5000,
+      "cambio": "Automatico",
+      "cor": "Preto",
+      "combustivel": "Gasolina",
+      "categoria": "Cupê",
+      "motor": "4.7",
+      "portas": 2,
+      "finalPlaca": 9,
+      "acessorios": [
+        "Airbag", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Desembaçador traseiro", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Rodas de liga leve", "Sensor de estacionamento", "Volante com regulagem de altura", "Bancos em couro", "Farol de xenônio", "Direção hidráulica"
+      ],
+      "valores": {
+        "compra": 0,
+        "parcelasMaximas": 0,
+        "jurosMensais": 0,
+        "aluguelDia": 525.90,
+        "aluguelMes": 5467.90
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202303/20230321/aston-martin-vantage-4.7-v8-32v-gasolina-2p-automatico-wmimagem12424485510.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202303/20230321/aston-martin-vantage-4.7-v8-32v-gasolina-2p-automatico-wmimagem12425031124.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202303/20230321/aston-martin-vantage-4.7-v8-32v-gasolina-2p-automatico-wmimagem12424747612.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 23,
+      "marca": 12,
+      "modelo": 22,
+      "ano": 2021,
+      "textoAnuncio": "GHOST 6.6",
+      "complementoAnuncio": "GHOST 6.6 V12 TURBO",
+      "quilometragem": 8325,
+      "cambio": "Automatico",
+      "cor": "Preto",
+      "combustivel": "Gasolina",
+      "categoria": "Sedã",
+      "motor": "6.6",
+      "portas": 4,
+      "finalPlaca": 0,
+      "acessorios": [
+        "Airbag", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Rodas de liga leve", "Sensor de estacionamento", "Volante com regulagem de altura", "Bancos em couro", "Farol de xenônio", "Direção hidráulica", "GPS"
+      ],
+      "valores": {
+        "compra": 2700000,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.47,
+        "aluguelDia": 1150.95,
+        "aluguelMes": 19348.50
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230703/rollsroyce-ghost-6.6-v12-turbo-gasolina-automatico-wmimagem16415089764.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230703/rollsroyce-ghost-6.6-v12-turbo-gasolina-automatico-wmimagem16420095492.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230703/rollsroyce-ghost-6.6-v12-turbo-gasolina-automatico-wmimagem16364921997.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 24,
+      "marca": 12,
+      "modelo": 23,
+      "ano": 2021,
+      "textoAnuncio": "CULLINAN 6.7",
+      "complementoAnuncio": "CULLINAN 6.7 V12 TURBO BLACK BADGE",
+      "quilometragem": 1383,
+      "cambio": "Automatico",
+      "cor": "Cinza",
+      "combustivel": "Gasolina",
+      "categoria": "Utilitário esportivo",
+      "motor": "6.7",
+      "portas": 4,
+      "finalPlaca": 7,
+      "acessorios": [
+        "Airbag", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Rodas de liga leve", "Sensor de estacionamento", "Volante com regulagem de altura", "Bancos em couro", "Farol de xenônio", "Direção hidráulica", "GPS"
+      ],
+      "valores": {
+        "compra": 7300000,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.75,
+        "aluguelDia": 1350.95,
+        "aluguelMes": 20348.50
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230617/rollsroyce-cullinan-6.7-v12-turbo-gasolina-black-badge-automatico-wmimagem17061555644.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230617/rollsroyce-cullinan-6.7-v12-turbo-gasolina-black-badge-automatico-wmimagem17061815825.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202306/20230617/rollsroyce-cullinan-6.7-v12-turbo-gasolina-black-badge-automatico-wmimagem17061758842.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 25,
+      "marca": 13,
+      "modelo": 24,
+      "ano": 2018,
+      "textoAnuncio": "720S 4.0",
+      "complementoAnuncio": "720S 4.0 V8 TURBO",
+      "quilometragem": 8325,
+      "cambio": "Automatico",
+      "cor": "Vermelho",
+      "combustivel": "Gasolina",
+      "categoria": "Cupê",
+      "motor": "4.0",
+      "portas": 2,
+      "finalPlaca": 0,
+      "acessorios": [
+        "Airbag", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Rodas de liga leve", "Retrovisores elétricos", "Sensor de estacionamento", "Volante com regulagem de altura", "Bancos em couro", "Farol de xenônio", "Direção hidráulica", "GPS"
+      ],
+      "valores": {
+        "compra": 3200000,
+        "parcelasMaximas": 18,
+        "jurosMensais": 1.27,
+        "aluguelDia": 2050.95,
+        "aluguelMes": 17348.50
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2022/202209/20220928/mclaren-720s-4.0-v8-turbo-gasolina-ssg-wmimagem11430190754.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2022/202209/20220928/mclaren-720s-4.0-v8-turbo-gasolina-ssg-wmimagem1143107058.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2022/202209/20220928/mclaren-720s-4.0-v8-turbo-gasolina-ssg-wmimagem11430277314.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 26,
+      "marca": 13,
+      "modelo": 25,
+      "ano": 2021,
+      "textoAnuncio": "GT 4.0",
+      "complementoAnuncio": "GT 4.0 V8",
+      "quilometragem": 2730,
+      "cambio": "Automatico",
+      "cor": "Azul",
+      "combustivel": "Gasolina",
+      "categoria": "Cupê",
+      "motor": "4.0",
+      "portas": 2,
+      "finalPlaca": 5,
+      "acessorios": [
+        "Airbag", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Rodas de liga leve","Farol de xenônio", "Direção hidráulica", "GPS"
+      ],
+      "valores": {
+        "compra": 2400000,
+        "parcelasMaximas": 12,
+        "jurosMensais": 1.25,
+        "aluguelDia": 1050.95,
+        "aluguelMes": 16348.50
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202305/20230531/mclaren-gt-4.0-v8-turbo-gasolina-ssg-wmimagem15575788524.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202305/20230531/mclaren-gt-4.0-v8-turbo-gasolina-ssg-wmimagem15575933128.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202305/20230531/mclaren-gt-4.0-v8-turbo-gasolina-ssg-wmimagem15575892616.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 27,
+      "marca": 14,
+      "modelo": 26,
+      "ano": 2022,
+      "textoAnuncio": "SF90 3.9",
+      "complementoAnuncio": "SF90 3.9 V8 TURBO PHEV STRADALE F1-DCT",
+      "quilometragem": 700,
+      "cambio": "Automatico",
+      "cor": "Vermelho",
+      "combustivel": "Gasolina",
+      "categoria": "Cupê",
+      "motor": "3.9",
+      "portas": 2,
+      "finalPlaca": 0,
+      "acessorios": [
+        "Airbag", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Rodas de liga leve", "Volante com regulagem de altura", "Bancos em couro"
+      ],
+      "valores": {
+        "compra": 5199990,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.35,
+        "aluguelDia": 3450.95,
+        "aluguelMes": 23348.75
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230728/ferrari-sf90-3.9-v8-turbo-phev-stradale-f1dct-wmimagem11073628611.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230728/ferrari-sf90-3.9-v8-turbo-phev-stradale-f1dct-wmimagem11073946236.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202307/20230728/ferrari-sf90-3.9-v8-turbo-phev-stradale-f1dct-wmimagem11073824134.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    },
+    {
+      "id": 28,
+      "marca": 14,
+      "modelo": 27,
+      "ano": 2021,
+      "textoAnuncio": "F8 TRIBUTO 3.9",
+      "complementoAnuncio": "F8 TRIBUTO 3.9 V8 TURBO F1-DCT",
+      "quilometragem": 8325,
+      "cambio": "Automatico",
+      "cor": "Amarelo",
+      "combustivel": "Gasolina",
+      "categoria": "Cupê",
+      "motor": "3.9",
+      "portas": 2,
+      "finalPlaca": 2,
+      "acessorios": [
+        "Airbag", "Ar quente", "Banco com regulagem de altura", "Computador de bordo", "Controle de tração", "Ar condicionado", "Freio ABS", "Controle automático de velocidade", "Rodas de liga leve", "Volante com regulagem de altura", "Bancos em couro", "Farol de xenônio", "Direção hidráulica", "GPS"
+      ],
+      "valores": {
+        "compra": 4150000,
+        "parcelasMaximas": 24,
+        "jurosMensais": 1.47,
+        "aluguelDia": 3450.95,
+        "aluguelMes": 22345.50
+      },
+      "imagens": [
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202305/20230512/ferrari-f8-tributo-3.9-v8-turbo-gasolina-f1dct-wmimagem10191252317.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202305/20230512/ferrari-f8-tributo-3.9-v8-turbo-gasolina-f1dct-wmimagem10205911453.jpg?s=fill&w=1920&h=1440&q=75",
+        "https://image.webmotors.com.br/_fotos/anunciousados/gigante/2023/202305/20230512/ferrari-f8-tributo-3.9-v8-turbo-gasolina-f1dct-wmimagem10195715889.jpg?s=fill&w=1920&h=1440&q=75"
+      ]
+    }
+  ],
+  "modelosDeCarro": [
+    {
+      "id": 1,
+      "modelo": "Argo",
+      "imagem": "https://cdn.autopapo.com.br/box/uploads/2019/11/25103818/fiat-argo-s-design-732x488.png"
+    },
+    {
+      "id": 2,
+      "modelo": "Fastback",
+      "imagem": "https://production.autoforce.com/uploads/used_model/profile_image/21982115/used_model_webp_comprar-fastback-1-3-turbo-270-flex-limited-edition-at6-1888_bc1dcb8a60.jpg.webp"
+    },
+    {
+      "id": 3,
+      "modelo": "S10",
+      "imagem": "https://www.chevrolet.com.br/bypass/gmccontenthub/chevrolet/brasil/S10_Cabina_Dupla/images/colorizer/s10-cabine-dupla-azul-eclipse-3-4-frente.png"
+    },
+    {
+      "id": 4,
+      "modelo": "Camaro SS",
+      "imagem": "https://i.pinimg.com/originals/8e/20/e1/8e20e155a922d8897cf49fe8a18883e8.png"
+    },
+    {
+      "id": 5,
+      "modelo": "Z4",
+      "imagem": "https://www.pngmart.com/files/22/BMW-Z4-PNG-Isolated-File.png"
+    },
+    {
+      "id": 6,
+      "modelo": "320i",
+      "imagem": "https://production.autoforce.com/uploads/version/profile_image/5031/comprar-320i-sport-gp_14a61f55e2.png"
+    },
+    {
+      "id": 7,
+      "modelo": "URUS",
+      "imagem": "https://www.pngarts.com/files/3/Lamborghini-Urus-PNG-Image-Background.png"
+    },
+    {
+      "id": 8,
+      "modelo": "Aventador",
+      "imagem": "https://www.pngall.com/wp-content/uploads/5/Lamborghini-Aventador-PNG-Clipart.png"
+    },
+    {
+      "id": 9,
+      "modelo": "MC20",
+      "imagem": "https://di-uploads-pod21.dealerinspire.com/rairdonsmaseratiofkirkland/uploads/2020/09/mc20-blu-infinito-e1601108293304.png"
+    },
+    {
+      "id": 10,
+      "modelo": "Levante",
+      "imagem": "https://pensecarros.com.br/cms/uploads/maserati-levante-3-8-v8-turbo-gasolina-trofeo-q4-automatico-5e4df8a29eea2.png"
+    },
+    {
+      "id": 11,
+      "modelo": "Mustang",
+      "imagem": "https://www.pngall.com/wp-content/uploads/13/Ford-Mustang-PNG-Pic.png"
+    },
+    {
+      "id": 12,
+      "modelo": "Ranger",
+      "imagem": "https://www.autoo.com.br/fotos/2023/1/1280_960/ranger1_10012023_72859_1280_960.jpg"
+    },
+    {
+      "id": 13,
+      "modelo": "Cayenne",
+      "imagem": "https://pensecarros.com.br/cms/uploads/porsche-cayenne-4-0-v8-gasolina-turbo-coupe-awd-tiptronic-s-6077a16c7fc92.png"
+    },
+    {
+      "id": 14,
+      "modelo": "Macan",
+      "imagem": "https://pensecarros.com.br/cms/uploads/porsche-macan-2-9-gts-24v-v6-gasolina-4p-automatico-5e4dfd14e47fa.png"
+    },
+    {
+      "id": 15,
+      "modelo": "Q3",
+      "imagem": "https://garagem360.com.br/wp-content/uploads/2023/07/Audi-Q3-Performance-Black-2023-3.jpg"
+    },
+    {
+      "id": 16,
+      "modelo": "R8",
+      "imagem": "https://www.pngplay.com/wp-content/uploads/13/Audi-R8-2019-Transparent-Images.png"
+    },
+    {
+      "id": 17,
+      "modelo": "C180",
+      "imagem": "https://static.wixstatic.com/media/6355eb_2e3e80616fc848a3a81fd589f4084c70~mv2.png/v1/fill/w_440,h_244,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c180%202019.png"
+    },
+    {
+      "id": 18,
+      "modelo": "G 63 AMG",
+      "imagem": "https://production.autoforce.com/uploads/version/profile_image/9520/comprar-amg-g-63_cdb4d7ec4d.png"
+    },
+    {
+      "id": 19,
+      "modelo": "XF",
+      "imagem": "https://imgd.aeplcdn.com/0X0/n/cw/ec/19826/xf-exterior-right-front-three-quarter.jpeg?q=75"
+    },
+    {
+      "id": 20,
+      "modelo": "F-Pace",
+      "imagem": "https://i.pinimg.com/originals/8a/0e/e7/8a0ee73e286fd21d7ec35a899c68213d.png"
+    },
+    {
+      "id": 21,
+      "modelo": "Vantage",
+      "imagem": "https://www.autoo.com.br/fotos/2021/8/1280_960/aston-martin_vantage_2021_9_04082021_49849_1280_960.jpg"
+    },
+    {
+      "id": 22,
+      "modelo": "Ghost",
+      "imagem": "https://purepng.com/public/uploads/large/purepng.com-rolls-royce-ghost-black-carcarvehicletransportrolls-royce-961524660882hukzh.png"
+    },
+    {
+      "id": 23,
+      "modelo": "Cullinan",
+      "imagem": "https://cdn.autopapo.com.br/box/uploads/2021/05/03193923/drake-rolls-royce-cullinan-1-1920x1080.jpg"
+    },
+    {
+      "id": 24,
+      "modelo": "720S",
+      "imagem": "https://pensecarros.com.br/cms/uploads/mclaren-720s-4-0-v8-turbo-gasolina-spider-ssg-5e4df8b10cb12.png"
+    },
+    {
+      "id": 25,
+      "modelo": "GT",
+      "imagem": "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/vhs/2021-mclaren-gt-index.png"
+    },
+    {
+      "id": 26,
+      "modelo": "SF90",
+      "imagem": "https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_675,q_auto:good,w_1200/cms/uploads/bqzgolxjiyscpew3l02p"
+    },
+    {
+      "id": 27,
+      "modelo": "F8 Tributo",
+      "imagem": "https://pensecarros.com.br/cms/uploads/ferrari-f8-3-9-v8-turbo-tributo-gasolina-f1-dct-5f2a136f39037.png"
+    }
+  ],
+  "marcas": [
+    {
+      "id": 1,
+      "marca": "Fiat",
+      "imagem": "https://logodownload.org/wp-content/uploads/2014/05/fiat-logo-21.png"
+    },
+    {
+      "id": 2,
+      "marca": "Chevrolet",
+      "imagem": "https://cdn.freebiesupply.com/logos/large/2x/chevrolet-1-logo-png-transparent.png"
+    },
+    {
+      "id": 3,
+      "marca": "BMW",
+      "imagem": "https://logospng.org/download/bmw/logo-bmw-2048.png"
+    },
+    {
+      "id": 4,
+      "marca": "Lamborghini",
+      "imagem": "https://logosmarcas.net/wp-content/uploads/2021/04/Lamborghini-Logo.png"
+    },
+    {
+      "id": 5,
+      "marca": "Maserati",
+      "imagem": "https://i.pinimg.com/736x/db/1b/70/db1b70ddcfb27d0e1b41727e2a91f251.jpg"
+    },
+    {
+      "id": 6,
+      "marca": "Ford",
+      "imagem": "https://logospng.org/download/ford/logo-ford-512.png"
+    },
+    {
+      "id": 7,
+      "marca": "Porsche",
+      "imagem": "https://logos-world.net/wp-content/uploads/2021/06/Porsche-Logo.png"
+    },
+    {
+      "id": 8,
+      "marca": "Audi",
+      "imagem": "https://www.imagensempng.com.br/wp-content/uploads/2020/12/0022-1.png"
+    },
+    {
+      "id": 9,
+      "marca": "Mercedes",
+      "imagem": "https://logodownload.org/wp-content/uploads/2014/04/mercedes-benz-logo-1-1.png"
+    },
+    {
+      "id": 10,
+      "marca": "Jaguar",
+      "imagem": "https://logos-world.net/wp-content/uploads/2021/03/Jaguar-Logo.png"
+    },
+    {
+      "id": 11,
+      "marca": "Aston Martin",
+      "imagem": "https://1000logos.net/wp-content/uploads/2020/02/Aston-Martin-Logo-1939.png"
+    },
+    {
+      "id": 12,
+      "marca": "Rolls Royce",
+      "imagem": "https://www.carlogos.org/logo/Rolls-Royce-logo-2048x2048.png"
+    },
+    {
+      "id": 13,
+      "marca": "McLaren",
+      "imagem": "https://www.pngplay.com/wp-content/uploads/9/Mclaren-Logo-Download-Free-PNG.png"
+    },
+    {
+      "id": 14,
+      "marca": "Ferrari",
+      "imagem": "https://www.escolacasa.com/wp-content/uploads/2021/03/Ferrari_Logo_Atual.jpg"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nomeCompleto": "Matheus M. Pinheiro",
+      "username": "matheusmp",
+      "tipo": "cliente"
+    },
+    {
+      "id": 2,
+      "nomeCompleto": "Luis Navarro",
+      "username": "luisnav4",
+      "tipo": "cliente"
+    },
+    {
+      "id": 3,
+      "nomeCompleto": "Carolina Lopes",
+      "username": "carollpbrian",
+      "tipo": "cliente"
+    },
+    {
+      "id": 4,
+      "nomeCompleto": "Rafael Regis",
+      "username": "rafaregis",
+      "tipo": "cliente"
+    },
+    {
+      "id": 5,
+      "nomeCompleto": "Matheus M. Pinheiro",
+      "username": "matheusmp",
+      "tipo": "cliente"
+    },
+    {
+      "id": 6,
+      "nomeCompleto": "Anderson Dias",
+      "username": "andersonDias",
+      "tipo": "admin"
+    },
+    {
+      "id": 7,
+      "nomeCompleto": "Millena Regina",
+      "username": "mimiregis",
+      "tipo": "admin"
+    }
+  ],
+  "fazerLogin": [
+    {
+      "id": 1,
+      "username": "matheusmp",
+      "senha": "123abc",
+      "idUsuario": 1
+    },
+    {
+      "id": 2,
+      "username": "luisnav4",
+      "senha": "123abc",
+      "idUsuario": 2
+    },
+    {
+      "id": 3,
+      "username": "carollpbrian",
+      "senha": "123abc",
+      "idUsuario": 3
+    },
+    {
+      "id": 4,
+      "username": "rafaregis",
+      "senha": "123abc",
+      "idUsuario": 4
+    },
+    {
+      "id": 5,
+      "username": "matheusmp",
+      "senha": "123abc",
+      "idUsuario": 5
+    },
+    {
+      "id": 6,
+      "username": "andersonDias",
+      "senha": "123abc",
+      "idUsuario": 6
+    },
+    {
+      "id": 7,
+      "username": "mimiregis",
+      "senha": "123abc",
+      "idUsuario": 7
+    }
+  ],
+  "conteudoSite": {
+    "home": {
+      "textoMarca": "Carros por Marca",
+      "textoModelo": "Carros por Modelo"
+    },
+    "internaProduto": {
+      "sugestao": "Conheça outros modelos"
+    }
+  }
+}

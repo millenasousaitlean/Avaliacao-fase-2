@@ -1,0 +1,38 @@
+footer{
+    background-color:#14181A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+
+    .logoAcesso{
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        gap: 30px;
+
+        img{
+            width: 180px;
+            cursor: pointer;
+        }
+        a{
+            font-family: 'inter';
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: row;
+        margin-right: 40px;
+        gap: 40px;
+
+        img{
+            width: 50px;
+            cursor: pointer;
+        }
+    }
+}

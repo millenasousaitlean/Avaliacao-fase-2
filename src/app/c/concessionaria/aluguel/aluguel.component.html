@@ -1,0 +1,264 @@
+<section>
+    <ng-container *ngFor="let info of carros; let i = index">
+        <ng-container *ngIf="info.id == idDaUrl">
+            <div class="parte1">
+                <div class="imgGaleri">
+                    <img src="{{info.imagens[0]}}" alt="">
+                    <img src="{{info.imagens[1]}}" alt="">
+                    <img src="{{info.imagens[2]}}" alt="">
+                </div>
+                <div class="infosCar">
+                    <div class="infosCarValorName">
+                        <div class="infosNameCar">
+                            <div class="carTipo">
+                                <h1>
+                                    {{ findMarca(info.marca)}} - {{findModelo(info.modelo)}} - {{info.ano}}
+                                </h1>
+                            </div>
+                            <div class="carPotencia">
+                                <h1>
+                                    {{info.textoAnuncio}}
+                                </h1>
+                                <h3>
+                                    {{info.complementoAnuncio}}
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="infosValores">
+                            <h1>
+                                Valores
+                            </h1>
+                            <h3>
+                                compra: {{formateValor(info.valores.compra)}}
+                            </h3>
+                            <h3>
+                                Aluguel p/ dia: {{formateValor(info.valores.aluguelDia)}}
+                            </h3>
+                            <h3>
+                                Aluguel p/ mês: {{formateValor(info.valores.aluguelMes)}}
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="menuInfos">
+                        <div class="ano">
+                            <img src="/assets/aluguelInter/icone-ano-modelo 1.png" alt="">
+                            <h3>
+                                {{info.ano}}
+                            </h3>
+                        </div>
+                        <div class="quilometragem">
+                            <img src="/assets/aluguelInter/icone-quilometragem 1.png" alt="">
+                            <h3>
+                                {{info.quilometragem}} Km
+                            </h3>
+                        </div>
+                        <div class="cambio">
+                            <img src="/assets/aluguelInter/icone-cambio 1.png" alt="">
+                            <h3>
+                                {{info.cambio}}
+                            </h3>
+                        </div>
+                        <div class="cor">
+                            <img src="/assets/aluguelInter/icone-cor-detran 1.png" alt="">
+                            <h3>
+                                {{info.cor}}
+                            </h3>
+                        </div>
+                        <div class="combustivel">
+                            <img src="/assets/aluguelInter/icone-combustivel 1.png" alt="">
+                            <h3>
+                                {{info.combustivel}}
+                            </h3>
+                        </div>
+                        <div class="carroceria">
+                            <img src="/assets/aluguelInter/icone-hatch 1.png" alt="">
+                            <h3>
+                                {{info.categoria}}
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="infosCarroceria">
+                        <div class="motor">
+                            <img src="/assets/aluguelInter/icone-motor 1.png" alt="">
+                            <h2>
+                                Motor: {{info.motor}}
+                            </h2>
+                        </div>
+                        <div class="portas">
+                            <img src="/assets/aluguelInter/icone-porta 1.png" alt="">
+                            <h2>
+                                Portas: {{info.portas}}
+                            </h2>
+                        </div>
+                        <div class="placa">
+                            <img src="/assets/aluguelInter/icone-final-placa 1.png" alt="">
+                            <h2>
+                                Final placa: {{info.finalPlaca}}
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="listaEspecificacao">
+                        <ul>
+                            <li>
+                                <ng-container *ngFor="let list of carros[i].acessorios; let i = index">
+                                    <div class="li">
+                                        <img src="../../../../assets/aluguelInter/Group 22.png" alt="">
+                                        <div>
+                                            {{list}}
+                                        </div>
+                                    </div>
+
+                                </ng-container>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btnSimulacao">
+                        <app-buttons [textBtn]="'Faça uma simulação'" [btnClass]="'btnSimulacao'"
+                            (clickNoButton)="abrirModal()"></app-buttons>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+    <div class="maisModelos">
+        <div class="tituloMais">
+            <h1>
+                Conheça outros modelos
+            </h1>
+        </div>
+        <div class="containerCards">
+            <ng-container *ngFor="let new of carrosRand">
+                <div (click)="mudarCarro(car.id)">
+                    <app-card [imgCard]="new.imagens[0]" [classCard]="'cardModelos'" [textCard]="new.textoAnuncio"
+                        [rotaCard]="'/concessionaria/page/aluguel/' + new.id"></app-card>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+
+    <ng-container *ngIf="openModal">
+        <div class="modal">
+            <div class="containerModal">
+                <h4 (click)="closeModal()">
+                    X
+                </h4>
+                <ng-container *ngFor="let mod of carros">
+                    <ng-container *ngIf="mod.id == idDaUrl">
+
+                        <div class="tituloModal">
+                            <h1>
+                                Simulação {{mod.textoAnuncio}}
+                            </h1>
+                        </div>
+                        <div class="btnModal">
+                            <app-buttons [textBtn]="'Comprar'" [btnClass]="'btnModal'"
+                                (clickNoButton)="compraModal()"></app-buttons>
+                            <app-buttons [textBtn]="'Aluguel'" [btnClass]="'btnModal'"
+                                (clickNoButton)="aluguelModal()"></app-buttons>
+                        </div>
+                        <ng-container *ngIf="modalCompra == false">
+                            <div class="compra">
+                                <div class="selectCompra">
+                                    <h2>
+                                        Número de parcelas
+                                    </h2>
+                                    <select id="selectModal" (change)="pegarInfosTabela($event)">
+                                        <ng-container *ngFor="let p of selectParcelas; let i = index">
+                                            <option value="{{p}}">{{p}}</option>
+                                        </ng-container>
+                                    </select>
+                                </div>
+                                <div class="scroolTable">
+                                    <div class="tabelaCompra">
+                                        <table>
+                                            <tr>
+                                                <th>
+                                                    Parcela
+                                                </th>
+                                                <th>
+                                                    Valor da parcela
+                                                </th>
+                                                <th>
+                                                    Valor total pago
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <ng-container *ngFor=" let p of arraysModal; let i = index">
+                                                    <td>
+                                                        <ng-container *ngFor="let parcela of p.parcelasVariavel">
+                                                            <div>
+                                                                {{parcela}}
+                                                            </div>
+                                                        </ng-container>
+                                                    </td>
+                                                    <td>
+                                                        <ng-container *ngFor=" let parcela of p.valorVeiculoComJuros">
+                                                            <div>
+                                                                {{formateValor(parcela / parcelasVariavel.length)}}
+                                                            </div>
+                                                        </ng-container>
+                                                    </td>
+                                                    <td>
+                                                        <ng-container *ngFor="let parcela of p.parcelasVariavel">
+                                                            <div>
+                                                                {{formateValor(valorDaParcela * parcela)}}
+                                                            </div>
+                                                        </ng-container>
+                                                    </td>
+                                                </ng-container>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="valorTotal">
+                                   <h2>
+                                    Valor total de {{formateValor(valorComJuros)}}
+                                </h2> 
+                                </div>
+                            </div>
+                        </ng-container>
+
+                        <ng-container *ngIf="modalCompra == true">
+                            <div class="aluguel">
+                                <div class="inputAluguel">
+                                    <h2>
+                                        Quantidade de dias
+                                    </h2>
+                                    <form>
+                                        <input type="number" (change)="infosAlugueis($event)">
+                                    </form>
+                                    <div class="valores">
+                                        <ng-container *ngIf="+qtdDias <= 30">
+                                            <h3>
+                                                Valor por dia R$ {{formateValor(aluguelDia)}}
+                                            </h3>
+                                        </ng-container>
+                                        <ng-container *ngIf=" +qtdDias > 30">
+                                            <h3>
+                                                Valor por mês R$ {{formateValor(aluguelMes)}}
+                                            </h3>
+                                        </ng-container>
+
+
+                                        <ng-container *ngIf="+qtdDias <= 30">
+                                            <h3>
+                                                Valor total de {{formateValor(valorAluguelDia)}}
+                                            </h3>
+                                        </ng-container>
+                                        <ng-container *ngIf=" +qtdDias > 30">
+                                            <h3>
+                                                Valor total de {{formateValor(valorAluguelMes)}}
+                                            </h3>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container>
+</section>
