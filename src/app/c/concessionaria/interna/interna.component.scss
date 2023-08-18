@@ -86,12 +86,13 @@ section {
                     color: #ffffff;
                     border: none;
                     border-radius: 7px;
-                    animation: 0.7s;
+                    animation: 0.4s;
                     cursor: pointer;
                 
                 }
                 button:hover{
-                    scale: 1.03;
+                    scale: 1.05;
+                    background: #ffc401;
                 }
             }
         }

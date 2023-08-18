@@ -10,15 +10,21 @@ export class ButtonsComponent {
 
   @Input() btnClass: string = ''
   @Input() textBtn: string = ''
+  @Input() ngClass: string = ''
 
 
   @Output() clickNoButton = new EventEmitter<string>();
+ 
 
 
   constructor(public rotaAtiva: Router) {}
   clickNoBtn(): void{
     this.clickNoButton.emit() 
-    console.log('btn', this.clickNoButton)
+    
+  }
+  loginFAzer(): void{
+    this.clickNoButton.emit() 
+    
   }
 
 

@@ -35,7 +35,6 @@ export class HomeComponent implements OnInit{
     this.apiCarros.getAllModelos().subscribe({
       next: (resp) => {
         this.modelos = resp
-        // console.log('carros',this.modelos)
       }, error: (erro) => {
         console.log(erro)
       }
@@ -46,7 +45,6 @@ export class HomeComponent implements OnInit{
     this.apiCarros.getAllMarcas().subscribe({
       next: (resp) => {
         this.marcas = resp
-        // console.log('marcas', this.marcas)
       }, error: (erro) => {
         console.log(erro)
       }
@@ -57,7 +55,6 @@ export class HomeComponent implements OnInit{
     this.apiCarros.getAllConteudo().subscribe({
       next: (resp) => {
         this.titulos = resp
-        // console.log('titulos', this.titulos)
       }, error: (erro) => {
         console.log(erro)
       }

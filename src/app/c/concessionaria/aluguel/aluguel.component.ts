@@ -7,6 +7,7 @@ import { Carros } from 'src/app/model/carros';
 import { ModeloDeCarro } from 'src/app/model/modelo-de-carro';
 import { CarrosService } from 'src/app/service/concessionaria/carros.service';
 import { ArraysModal } from 'src/app/model/arrays-modal';
+import { ConteudoSite } from 'src/app/model/conteudo-site';
 
 @Component({
   selector: 'app-aluguel',
@@ -19,10 +20,13 @@ export class AluguelComponent implements OnInit {
   carros: Carros[] = [];
   modelo: ModeloDeCarro[] = [];
   carrosRand: Carros[] = [];
+  titulos: ConteudoSite = new ConteudoSite()
 
   idDaUrl: number = 0;
-  openModal = false;
-  modalCompra = false
+  aluguelCarro: boolean = false
+  openModal: boolean = false
+
+
 
   // MODAL COMPRA
   juros: number = 0
@@ -85,6 +89,7 @@ export class AluguelComponent implements OnInit {
     this.sorteCarros();
     this.pegarMarcas();
     this.pegarModelos();
+    this.pegarConteudoSite()
     this.valorParcela();
     this.getsInfosAluguel()
   }
@@ -113,6 +118,16 @@ export class AluguelComponent implements OnInit {
       }
     })
   }
+  pegarConteudoSite(): void {
+    this.apiCarros.getAllConteudo().subscribe({
+      next: (resp) => {
+        this.titulos = resp
+      }, error: (erro) => {
+        console.log(erro)
+      }
+    })
+  }
+
   findMarca(id: number): string {
     for (let d of this.marcas) {
       if (d.id == id) {
@@ -154,36 +169,54 @@ export class AluguelComponent implements OnInit {
     scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-
-
-
   // MODAL
 
 
-  abrirModal(): void {
-    this.openModal = true
-    this.compraModal()
+
+  abrirModal(): boolean {
+    const usuario = JSON.parse(localStorage.getItem('user') as string)
+    if(usuario){
+      this.apiCarros.getCarrosPorId(this.idDaUrl).subscribe({
+      next: (data) => {
+        this.car = data
+        if (this.car.valores.aluguelMes == 0 && this.car.valores.compra > 1) {
+          this.compraModal()
+        } if (this.car.valores.compra == 0 && this.car.valores.aluguelMes > 1) {
+          this.aluguelModal()
+        } if (this.car.valores.compra > 1 && this.car.valores.aluguelMes > 1) {
+          this.compraModal()
+        } else if (this.car.valores.compra == 0 && this.car.valores.aluguelMes == 0) {
+          alert('Produto Indisponivel')
+        }
+      }
+    })
+    return true
+    } else{
+      this.openModal = true
+      return false
+    }
   }
 
+
+
   closeModal(): void {
+    this.router.navigate([`concessionaria/page/aluguel/${this.idDaUrl}`])
+  }
+  closeModalLogin(): void{
     this.openModal = false
   }
 
   aluguelModal() {
-    this.modalCompra = true
-
+    this.router.navigate([`concessionaria/page/aluguel/modal/aluguel/${this.idDaUrl}`])
   }
 
   compraModal() {
-    this.modalCompra = false
+    this.router.navigate([`concessionaria/page/aluguel/modal/compra/${this.idDaUrl}`])
   }
 
-  
-
-
-
-
-
+  loginModal(){
+    this.router.navigate([`concessionaria/page/login`])
+  }
 
   // MODAL COMPRA 
 
@@ -239,7 +272,6 @@ export class AluguelComponent implements OnInit {
     };
     return valor.toLocaleString('pt-BR', opcoes)
   }
-
 
   // MODAL ALUGUEL
 

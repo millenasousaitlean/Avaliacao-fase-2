@@ -3,6 +3,13 @@
         <img src="/assets/navBar/itlean-logo-white 1.png" alt="logo IT Lean" routerLink="/concessionaria/page/home">
     </div>
     <div class="login">
-        <img src="/assets/navBar/conecte-se 1.png" alt="login" routerLink="/concessionaria/page/login">
+        <ng-container *ngIf="!user">
+            <img src="/assets/navBar/conecte-se 1.png" alt="login" routerLink="/concessionaria/page/login">
+        </ng-container>
+        <ng-container *ngIf="user">
+            <h3 (click)="deslogar()">
+                Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </h3>
+        </ng-container>
     </div>
 </nav>

@@ -264,8 +264,8 @@ section {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: 40px;
-        margin-bottom: 50px;
+        margin-top: 90px;
+        margin-bottom: 60px;
 
         .tituloMais {
             display: flex;
@@ -276,8 +276,8 @@ section {
 
             h1 {
                 font-family: 'inter';
-                font-size: 30px;
-                font-weight: 500;
+                font-size: 33px;
+                font-weight: 600;
                 color: black;
             }
         }
@@ -310,7 +310,7 @@ section {
     .containerModal {
         background-color: #ffffff;
         width: 50%;
-        height: 90%;
+        height: 93%;
         display: flex;
         flex-direction: column;
 
@@ -336,6 +336,24 @@ section {
             flex-direction: row;
             justify-content: space-around;
             margin-top: 40px;
+
+            button {
+                width: 210px;
+                background: #ffcd9fbd;
+                padding: 14px 40px;
+                font-family: 'inter';
+                font-size: 18px;
+                font-weight: 600;
+                color: #ffffff;
+                border: none;
+                border-radius: 7px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            button:hover {
+                transform: scale(1.03);
+            }
         }
 
         .compra {
@@ -367,15 +385,15 @@ section {
             .scroolTable {
                 margin-right: -50px;
                 width: 95%;
-                max-height: 250px;
+                max-height: 230px;
                 overflow-y: auto;
+                margin-top: 15px;
 
 
                 .tabelaCompra {
                     width: 95%;
                     display: flex;
                     flex-direction: column;
-                    margin-top: 10px;
                     // max-height: 200px;
                     // overflow-y: scroll;
 
@@ -408,15 +426,13 @@ section {
                             text-align: center;
                             border: #FF7A00;
 
-
-
                             td {
                                 font-family: 'inter';
                                 font-size: 15px;
                                 font-weight: 400;
-                                line-height: 3;
-                                color: black;
-                                border-bottom: 1px solid rgb(0, 0, 0);
+                                line-height: 3.2;
+                                // color: black;
+                                // border-bottom: 1px solid rgb(0, 0, 0);
 
                             }
                         }
@@ -433,13 +449,14 @@ section {
                 display: flex;
                 flex-direction: row;
                 justify-content: right;
+
                 h2 {
                     margin-top: 30px;
                     text-align: right;
                     font-family: 'inter';
                     font-size: 16px;
                     font-weight: 700;
-                    margin-bottom: 30px;
+                    margin-bottom: 40px;
 
                 }
             }
@@ -447,43 +464,160 @@ section {
 
         }
 
-        .aluguel {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 95%;
-            margin-top: 30px;
 
-            .inputAluguel {
-                width: 90%;
 
-                h2 {
-                    font-family: 'inter';
-                    font-size: 16px;
-                    font-weight: 500;
-                }
+    }
+}
 
-                input {
-                    width: 50px;
-                    height: 20px;
-                }
 
-                h3 {
-                    margin-top: 50px;
-                    font-family: 'inter';
-                    font-size: 16px;
-                    font-weight: 700;
-                }
+.containerModalAluguel {
+    background-color: #ffffff;
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
 
-                .valores {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-                }
+
+    h4 {
+        position: relative;
+        left: 96%;
+        top: 2%;
+        font-family: 'inter';
+        font-size: 20px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .tituloModal {
+        text-align: center;
+        font-family: 'inter';
+        font-size: 20px;
+    }
+
+    .btnModal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 40px;
+
+        button {
+            width: 210px;
+            background: #ffcd9fbd;
+            padding: 14px 40px;
+            font-family: 'inter';
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+        }
+    }
+
+
+    .aluguel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        margin-top: 30px;
+
+        .inputAluguel {
+            width: 90%;
+
+            h2 {
+                font-family: 'inter';
+                font-size: 16px;
+                font-weight: 500;
             }
 
+            input {
+                width: 50px;
+                height: 20px;
+            }
+
+            h3 {
+                margin-top: 50px;
+                font-family: 'inter';
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .valores {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
         }
 
     }
+}
+
+.sectionModalLogin {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #212121d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+
+    .containerModalLogin {
+        background-color: #ffffff;
+        width: 40%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .textoModal{
+            font-family: 'inter';
+            font-size: 18px;
+            font-weight: 500px;
+            margin-top: 50px;
+        }
+
+        .btnModal{
+            margin-top: 30px;
+            .closeModal{
+                margin-right: 10px;
+                width: 150px;
+                height: 25px;
+                border-radius: 12px;
+                border: none;
+                background-color: #e63131cb;
+                color: #ffffff;
+                font-family: 'inter';
+                font-weight: 600;
+            }
+            .loginModal{
+                margin-right: 10px;
+                width: 150px;
+                height: 25px;
+                border-radius: 12px;
+                border: none;
+                background-color: #046822;
+                color: #ffffff;
+                font-family: 'inter';
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+
+button.ativo {
+    background-color: #FF7A00 !important;
 }

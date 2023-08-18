@@ -28,15 +28,19 @@
                             <h1>
                                 Valores
                             </h1>
-                            <h3>
-                                compra: {{formateValor(info.valores.compra)}}
-                            </h3>
-                            <h3>
-                                Aluguel p/ dia: {{formateValor(info.valores.aluguelDia)}}
-                            </h3>
-                            <h3>
-                                Aluguel p/ mês: {{formateValor(info.valores.aluguelMes)}}
-                            </h3>
+                            <ng-container *ngIf="info.valores.compra > 1">
+                                <h3>
+                                    compra: {{formateValor(info.valores.compra)}}
+                                </h3>
+                            </ng-container>
+                            <ng-container *ngIf="info.valores.aluguelDia > 1 || info.valores.aluguelMes > 1">
+                                <h3>
+                                    Aluguel p/ dia: {{formateValor(info.valores.aluguelDia)}}
+                                </h3>
+                                <h3>
+                                    Aluguel p/ mês: {{formateValor(info.valores.aluguelMes)}}
+                                </h3>
+                            </ng-container>
                         </div>
                     </div>
                     <div class="menuInfos">
@@ -123,7 +127,7 @@
     <div class="maisModelos">
         <div class="tituloMais">
             <h1>
-                Conheça outros modelos
+                {{titulos['internaProduto'].sugestao}}
             </h1>
         </div>
         <div class="containerCards">
@@ -136,34 +140,42 @@
         </div>
     </div>
 
+    <ng-container *ngIf="car.valores.compra <= 1">
+        <ng-container *ngIf="router.url.includes('concessionaria/page/aluguel/modal/compra/')">
+            <div class="modal">
+                <div class="containerModal">
+                    <h4 (click)="closeModal()">
+                        X
+                    </h4>
+                    <ng-container *ngFor="let mod of carros">
+                        <ng-container *ngIf="mod.id == idDaUrl">
 
-    <ng-container *ngIf="openModal">
-        <div class="modal">
-            <div class="containerModal">
-                <h4 (click)="closeModal()">
-                    X
-                </h4>
-                <ng-container *ngFor="let mod of carros">
-                    <ng-container *ngIf="mod.id == idDaUrl">
-
-                        <div class="tituloModal">
-                            <h1>
-                                Simulação {{mod.textoAnuncio}}
-                            </h1>
-                        </div>
-                        <div class="btnModal">
-                            <app-buttons [textBtn]="'Comprar'" [btnClass]="'btnModal'"
-                                (clickNoButton)="compraModal()"></app-buttons>
-                            <app-buttons [textBtn]="'Aluguel'" [btnClass]="'btnModal'"
-                                (clickNoButton)="aluguelModal()"></app-buttons>
-                        </div>
-                        <ng-container *ngIf="modalCompra == false">
+                            <div class="tituloModal">
+                                <h1>
+                                    Simulação {{mod.textoAnuncio}}
+                                </h1>
+                            </div>
+                            <div class="btnModal">
+                                <ng-container *ngIf="mod.valores.compra >= 1">
+                                    <button type="button" (click)="compraModal()"
+                                        [ngClass]="{'ativo': (router.url == '/modal/compra/') || (router.url.includes('concessionaria/page/aluguel/modal/compra/')) }">
+                                        Comprar
+                                    </button>
+                                </ng-container>
+                                <ng-container *ngIf="mod.valores.aluguelDia >= 1">
+                                    <button type="button" (click)="aluguelModal()"
+                                        [ngClass]="{'ativo': (router.url == '/modal/aluguel/') || (router.url.includes('concessionaria/page/aluguel/modal/aluguel/')) }">
+                                        Alugar
+                                    </button>
+                                </ng-container>
+                            </div>
                             <div class="compra">
                                 <div class="selectCompra">
                                     <h2>
                                         Número de parcelas
                                     </h2>
                                     <select id="selectModal" (change)="pegarInfosTabela($event)">
+                                        <option value=""></option>
                                         <ng-container *ngFor="let p of selectParcelas; let i = index">
                                             <option value="{{p}}">{{p}}</option>
                                         </ng-container>
@@ -183,7 +195,6 @@
                                                     Valor total pago
                                                 </th>
                                             </tr>
-
                                             <tr>
                                                 <ng-container *ngFor=" let p of arraysModal; let i = index">
                                                     <td>
@@ -191,13 +202,19 @@
                                                             <div>
                                                                 {{parcela}}
                                                             </div>
+
+                                                            <hr width="225%">
                                                         </ng-container>
                                                     </td>
                                                     <td>
-                                                        <ng-container *ngFor=" let parcela of p.valorVeiculoComJuros">
+                                                        <ng-container
+                                                            *ngFor=" let parcela of p.valorVeiculoComJuros; let i = index ">
                                                             <div>
                                                                 {{formateValor(parcela / parcelasVariavel.length)}}
                                                             </div>
+                                                            <hr width="200%"
+                                                                *ngIf="p.valorVeiculoComJuros.lastIndexOf(-1)">
+
                                                         </ng-container>
                                                     </td>
                                                     <td>
@@ -205,6 +222,7 @@
                                                             <div>
                                                                 {{formateValor(valorDaParcela * parcela)}}
                                                             </div>
+
                                                         </ng-container>
                                                     </td>
                                                 </ng-container>
@@ -213,14 +231,47 @@
                                     </div>
                                 </div>
                                 <div class="valorTotal">
-                                   <h2>
-                                    Valor total de {{formateValor(valorComJuros)}}
-                                </h2> 
+                                    <h2>
+                                        Valor total de {{formateValor(valorComJuros)}}
+                                    </h2>
                                 </div>
                             </div>
                         </ng-container>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
 
-                        <ng-container *ngIf="modalCompra == true">
+    <ng-container *ngIf="car.valores.aluguelDia <= 1">
+        <ng-container *ngIf="router.url.includes('concessionaria/page/aluguel/modal/aluguel/')">
+            <div class="modal">
+                <div class="containerModalAluguel">
+                    <h4 (click)="closeModal()">
+                        X
+                    </h4>
+                    <ng-container *ngFor="let mod of carros">
+                        <ng-container *ngIf="mod.id == idDaUrl">
+                            <div class="tituloModal">
+                                <h1>
+                                    Simulação {{mod.textoAnuncio}}
+                                </h1>
+                            </div>
+                            <div class="btnModal">
+                                <ng-container *ngIf="mod.valores.compra >= 1">
+                                    <button type="button" (click)="compraModal()"
+                                        [ngClass]="{'ativo': (router.url == '/modal/compra/') || (router.url.includes('concessionaria/page/aluguel/modal/compra/')) }">
+                                        Comprar
+                                    </button>
+                                </ng-container>
+                                <ng-container *ngIf="mod.valores.aluguelDia >= 1">
+                                    <button type="button" (click)="aluguelModal()"
+                                        [ngClass]="{'ativo': (router.url == '/modal/aluguel/') || (router.url.includes('concessionaria/page/aluguel/modal/aluguel/')) }">
+                                        Alugar
+                                    </button>
+                                </ng-container>
+
+                            </div>
                             <div class="aluguel">
                                 <div class="inputAluguel">
                                     <h2>
@@ -240,8 +291,6 @@
                                                 Valor por mês R$ {{formateValor(aluguelMes)}}
                                             </h3>
                                         </ng-container>
-
-
                                         <ng-container *ngIf="+qtdDias <= 30">
                                             <h3>
                                                 Valor total de {{formateValor(valorAluguelDia)}}
@@ -257,8 +306,28 @@
                             </div>
                         </ng-container>
                     </ng-container>
-                </ng-container>
+                </div>
             </div>
-        </div>
+        </ng-container>
     </ng-container>
 </section>
+
+<ng-container *ngIf="openModal == true">
+    <section class="sectionModalLogin">
+        <div class="containerModalLogin">        
+                <div class="textoModal">
+                    <h1>
+                    Login necessario para realizar simulação!
+                    </h1>
+                </div>
+                <div class="btnModal">
+                    <button type="button" class="closeModal" (click)="closeModalLogin()">
+                        Fechar
+                    </button>
+                    <button type="button" class="loginModal" (click)="loginModal()">
+                        Fazer login
+                    </button>
+                </div>           
+        </div>
+    </section>
+</ng-container>

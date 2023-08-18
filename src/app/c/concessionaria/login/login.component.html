@@ -3,18 +3,49 @@
         <h1>
             Login
         </h1>
+        <form [formGroup]="formLogin" *ngIf="!isLoading">
+            <div class="containerInputs">
+                <label for="">Username</label>
+                <input type="text" placeholder="Username" class="transparentPlaceholder" id="userInput" formControlName="login" [ngClass]="{ 'invalid': (formLogin.controls['login'].status == 'INVALID' 
+                && formLogin.controls['login'].touched) }">
+                <small *ngIf="formLogin.controls['login'].status == 'INVALID' && formLogin.controls['login'].touched">
+                    Campo Inválido!
+                </small>
+            </div>
+            <div class="containerInputs">
+                <label for="">Senha</label>
+                <input type="password" placeholder="Senha" class="transparentPlaceholder" formControlName="senha" [ngClass]="{ 'invalid': (formLogin.controls['senha'].status == 'INVALID' 
+                && formLogin.controls['senha'].touched) }">
+                <small *ngIf="formLogin.controls['senha'].status == 'INVALID' && formLogin.controls['senha'].touched">
+                    Campo Inválido!
+                </small>
+            </div>
+        </form>
         <div class="containerInputs">
-            <label for="">Username</label>
-            <input type="text" placeholder="Username">
-            <label for="">Senha</label>
-            <input type="text" placeholder="Senha">
-            <app-buttons [textBtn]="'Entrar'" [btnClass]="'btnLogin'"></app-buttons>
+            <app-buttons [textBtn]="'Entrar'" [btnClass]="'btnLogin'"  (clickNoButton)="acessarLogin()" ></app-buttons>
         </div>
+
         <div class="textCriarConta">
             <h3>
-                Ainda não tem conta? 
+                Ainda não tem conta?
             </h3>
             <a href="/concessionaria/page/singUp">Crie aqui!</a>
+        </div>
+    </div>
+</section>
+
+<section id="modal-error-login" *ngIf="openModal">
+    <div class="card-error">
+        <div class="erro-login" *ngIf="errorLogin">
+            <h1>
+                {{errorLogin}}
+            </h1>
+            <h2>
+                Verifique se o login e/ou a senha estão correto
+            </h2>
+            <button class="btnClose" type="button" (click)="fecharModal()">
+                Fechar
+            </button>
         </div>
     </div>
 </section>
