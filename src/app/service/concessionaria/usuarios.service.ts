@@ -16,18 +16,34 @@ export class UsuariosService {
     private http: HttpClient
   ) {}
 
+  // Fazer Login
   getAllUsernames(): Observable<FazerLogin[]> {
     return this.http.get<FazerLogin[]>(`${this.baseUrl}fazerLogin`)
   }
 
-  getLogin(login: string, senha: string): Observable<FazerLogin[]> {
-    return this.http.get<FazerLogin[]>(`${this.baseUrl}`)
+  getLogin(login: string, senha: string, tipo: string): Observable<FazerLogin[]> {
+    return this.http.get<FazerLogin[]>(`${this.baseUrl}fazerLogin/?username=${login}&senha=${senha}&tipo=${tipo}`)
   }
 
-  getUsuariosLogin(): Observable<Usuarios[]>{
-    return this.http.get<Usuarios[]>(`${this.baseUrl}`)
+  postCriarNewLogin(login: FazerLogin): Observable<FazerLogin> {
+    return this.http.post<FazerLogin>(`${this.baseUrl}fazerLogin`, login)
   }
 
+  // Usuarios
+  getUsuariosLogin(login: string): Observable<Usuarios[]>{
+    return this.http.get<Usuarios[]>(`${this.baseUrl}usuarios/?username=${login}`)
+  }
+
+  getUsuariosLoginAdm(login: string, tipo: string): Observable<Usuarios[]>{
+    return this.http.get<Usuarios[]>(`${this.baseUrl}usuarios/?username=${login}&tipo=${tipo}`)
+  }
+  getAllUsuarioscadastro(): Observable<Usuarios[]>{
+    return this.http.get<Usuarios[]>(`${this.baseUrl}usuarios`)
+  }
+
+  postCriarNewUsuario(user: Usuarios): Observable<Usuarios> {
+    return this.http.post<Usuarios>(`${this.baseUrl}usuarios`, user)
+  }
 
 
 

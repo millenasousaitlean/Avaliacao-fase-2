@@ -29,3 +29,23 @@ nav {
         }
     }
 }
+
+
+
+
+@media(max-width: 670px){
+
+    .logo{
+        margin-left: 20px !important;
+        img{
+            width: 120px !important;            
+        }
+    }
+
+    .login{
+        margin-right: 20px !important;       
+    }
+
+    
+    
+}

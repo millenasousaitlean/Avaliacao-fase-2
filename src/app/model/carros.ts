@@ -2,8 +2,8 @@ import { Valores } from "./valores"
 
 export class Carros {
   public id: number
-  public marca: number
-  public modelo: number
+  public marca: any
+  public modelo: any
   public ano: number
   public textoAnuncio: string
   public complementoAnuncio: string
@@ -30,8 +30,8 @@ export class Carros {
   constructor() {
 
     this.id = 0,
-      this.marca = 0,
-      this.modelo = 0,
+      this.marca ,
+      this.modelo ,
       this.ano = 0,
       this.textoAnuncio = '',
       this.complementoAnuncio = '',

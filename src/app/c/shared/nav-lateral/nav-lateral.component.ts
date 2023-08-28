@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class NavLateralComponent {
 
+
+  
+
+  deslogar(){
+   
+    localStorage.clear()
+    window.location.href = "http://localhost:4200/page/loginAdm"
+  }
+
+
 }

@@ -1,24 +1,92 @@
 <section>
     <div class="containerLogin">
         <h1>
-            Sing Up
+            Sign Up
         </h1>
-        <div class="containerInputs">
-            <div class="input1">
-                <label for="">Username</label>
-                <input type="text" placeholder="Username">
-                <label for="">Senha</label>
-                <input type="text" placeholder="Senha">
+        <form [formGroup]="formCadastro">
+            <div class="containerInputs">
+                <div class="input1">
+                    <div class="username">
+                        <label for="usernameInput">Username</label>
+                        <small
+                            *ngIf="formCadastro.controls['username'].status == 'INVALID' && formCadastro.controls['username'].touched">
+                            Campo Inválido!
+                        </small>
+                        <input type="text" placeholder="Username" formControlName="username" [ngClass]="{ 'invalid': (formCadastro.controls['username'].status == 'INVALID' 
+                && formCadastro.controls['username'].touched) }">
+                    </div>
+                    <div class="nomeCompleto">
+                        <label for="nomeComppletoInput">Nome completo</label>
+                        <small
+                            *ngIf="formCadastro.controls['nomeCompleto'].status == 'INVALID' && formCadastro.controls['nomeCompleto'].touched">
+                            Campo Inválido!
+                        </small>
+                        <input type="text" placeholder="Nome completo" formControlName="nomeCompleto" [ngClass]="{ 'invalid': (formCadastro.controls['nomeCompleto'].status == 'INVALID' 
+                    && formCadastro.controls['nomeCompleto'].touched) }">
+                    </div>
+                </div>
+
+                <div class="input2">
+                    <div class="senha">
+                        <label for="senhaInput">Senha</label>
+                        <small
+                            *ngIf="formCadastro.controls['senha'].status == 'INVALID' && formCadastro.controls['senha'].touched">
+                            Campo Inválido!
+                        </small>
+                        <input type="password" placeholder="Senha" formControlName="senha" [ngClass]="{ 'invalid': (formCadastro.controls['senha'].status == 'INVALID' 
+                    && formCadastro.controls['senha'].touched) }">
+                    </div>
+                    <div class="confirmSenha">
+                        <label for="senhaInput">Confirmar senha</label>
+                        <small
+                            *ngIf="formCadastro.controls['confirmSenha'].status == 'INVALID' && formCadastro.controls['confirmSenha'].touched">
+                            Campo Inválido!
+                        </small>
+                        <input type="password" placeholder="Confirmar senha" formControlName="confirmSenha" [ngClass]="{ 'invalid': (formCadastro.controls['confirmSenha'].status == 'INVALID' 
+                    && formCadastro.controls['confirmSenha'].touched) }">
+                    </div>
+                </div>
             </div>
-            <div class="input2">
-                <label for="">Nome completo</label>
-                <input type="text" placeholder="Nome completo">
-                <label for="">Confirmar senha</label>
-                <input type="text" placeholder="Confirmar senha">
-            </div>   
-        </div>
-        <div class="btnSingUp">
-            <app-buttons [textBtn]="'Entrar'" [btnClass]="'btnLogin'"></app-buttons>
-        </div>
+            <div class="containerBtn">
+                <button type="button" [disabled]="formCadastro.status === 'INVALID'" (click)="criarUser()">
+                    Entrar
+                </button>
+            </div>
+        </form>
+
     </div>
 </section>
+
+<ng-container *ngIf="openModalOK == true">
+    <div class="modal">
+        <div class="containerModal">
+            <div class="textModal">
+                <h1>
+                    Cadastro realizado com sucesso!
+                </h1>
+            </div>
+            <div class="btnModal">
+                <button type="button" (click)="btnOk()">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="openJaCadastrado == true">
+    <div class="modal">
+        <div class="containerModal">
+            <div class="textModal">
+                <h1>
+                    Usuario ja castrado!
+                </h1>
+            </div>
+            <div class="btnModalCd">
+                <button type="button" (click)="closeModal()">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-container>

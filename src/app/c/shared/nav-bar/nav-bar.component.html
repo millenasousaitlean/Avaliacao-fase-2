@@ -6,10 +6,13 @@
         <ng-container *ngIf="!user">
             <img src="/assets/navBar/conecte-se 1.png" alt="login" routerLink="/concessionaria/page/login">
         </ng-container>
-        <ng-container *ngIf="user">
-            <h3 (click)="deslogar()">
-                Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
-            </h3>
+        <ng-container *ngIf="router.url.includes('/concessionaria/page')">
+            <ng-container *ngIf="user">
+                <h3 (click)="deslogar()">
+                    Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
+                </h3>
+            </ng-container>
         </ng-container>
     </div>
+
 </nav>

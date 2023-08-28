@@ -53,8 +53,6 @@ export class InternaComponent implements OnInit{
             this.todosModelosPorId.push(this.car[i].id)
           }
         }
-        // console.log(this.todosPorId)
-        // console.log('carros',this.car)
       }, error: (erro) => {
         console.log(erro)
       }
@@ -84,7 +82,6 @@ export class InternaComponent implements OnInit{
       if(d.id == this.idDaUrl){
         return d.marca
       }
-      // console.log('aqui', this.marcas)
     }
     return ''
   }
@@ -94,7 +91,6 @@ export class InternaComponent implements OnInit{
       if(f.id == this.idDaUrl){
         return f.modelo
       }
-      // console.log('aqui', this.marcas)
     }
     return ''
   }

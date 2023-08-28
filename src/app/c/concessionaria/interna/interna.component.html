@@ -1,47 +1,49 @@
 <section>
     <ng-container *ngIf="router.url.includes('marcas')">
-        <div class="containerTitulo">
-            <h1>
-                Marca: <b>{{ findMarca() }}</b>
-            </h1>
-            <h4>
-                Mostrando {{todosPorId.length}} resultados
-            </h4>
-        </div>
-        <div class="containerCards">
-            <ng-container *ngFor="let info of car">
-                <ng-container *ngIf="info.marca == idDaUrl ">
-                    <div class="cardInterna">
-                        <div class="imgCard">
-                            <img src="{{info.imagens[0]}}" alt="">
+        <div class="containerTudoMarca">
+            <div class="containerTitulo">
+                <h1>
+                    Marca: <b>{{ findMarca() }}</b>
+                </h1>
+                <h4>
+                    Mostrando {{todosPorId.length}} resultados
+                </h4>
+            </div>
+            <div class="containerCards">
+                <ng-container *ngFor="let info of car">
+                    <ng-container *ngIf="info.marca == idDaUrl ">
+                        <div class="cardInterna">
+                            <div class="imgCard">
+                                <img src="{{info.imagens[0]}}" alt="">
+                            </div>
+                            <div class="textCard">
+                                <h1>
+                                    {{info.textoAnuncio}}
+                                </h1>
+                                <ng-container *ngIf="info.valores.compra == 0 && info.valores.aluguelDia >= 1">
+                                    <h3>
+                                        Disponivel para aluguel
+                                    </h3>
+                                </ng-container>
+                                <ng-container *ngIf="info.valores.compra >= 1 && info.valores.aluguelDia == 0">
+                                    <h3>
+                                        Disponivel para Compra
+                                    </h3>
+                                </ng-container>
+                                <ng-container *ngIf="info.valores.compra >= 1 && info.valores.aluguelDia >= 1">
+                                    <h3>
+                                        Disponivel para Compra e aluguel
+                                    </h3>
+                                </ng-container>
+                                <button type="button" routerLink="/concessionaria/page/aluguel/{{info.id}}">
+                                    Ver detalhes
+                                </button>
+                            </div>
                         </div>
-                        <div class="textCard">
-                            <h1>
-                                {{info.textoAnuncio}}
-                            </h1>
-                            <ng-container *ngIf="info.valores.compra == 0 && info.valores.aluguelDia >= 1">
-                                <h3>
-                                    Disponivel para aluguel
-                                </h3>
-                            </ng-container>
-                            <ng-container *ngIf="info.valores.compra >= 1 && info.valores.aluguelDia == 0">
-                                <h3>
-                                    Disponivel para Compra
-                                </h3>
-                            </ng-container>
-                            <ng-container *ngIf="info.valores.compra >= 1 && info.valores.aluguelDia >= 1">
-                                <h3>
-                                    Disponivel para Compra e aluguel
-                                </h3>
-                            </ng-container>
-                            <button type="button" routerLink="/concessionaria/page/aluguel/{{info.id}}">
-                                Ver detalhes
-                            </button>
-                        </div>
-                    </div>
 
+                    </ng-container>
                 </ng-container>
-            </ng-container>
+            </div>
         </div>
     </ng-container>
 </section>
@@ -49,47 +51,50 @@
 
 <section>
     <ng-container *ngIf="router.url.includes('modelos')">
-        <div class="containerTitulo">
-            <h1>
-                Modelo: <b>{{ findModelo() }}</b>
-            </h1>
-            <h4>
-                Mostrando {{todosModelosPorId.length}} resultados
-            </h4>
-        </div>
-        <div class="containerCards">
-            <ng-container *ngFor="let info of car">
-                <ng-container *ngIf="info.modelo == idDaUrl">
-                    <div class="cardInterna">
-                        <div class="imgCard">
-                            <img src="{{info.imagens[0]}}" alt="">
+        <div class="containerTudoModelo">
+            <div class="containerTitulo">
+                <h1>
+                    Modelo: <b>{{ findModelo() }}</b>
+                </h1>
+                <h4>
+                    Mostrando {{todosModelosPorId.length}} resultados
+                </h4>
+            </div>
+            <div class="containerCards">
+                <ng-container *ngFor="let info of car">
+                    <ng-container *ngIf="info.modelo == idDaUrl">
+                        <div class="cardInterna">
+                            <div class="imgCard">
+                                <img src="{{info.imagens[0]}}" alt="">
+                            </div>
+                            <div class="textCard">
+                                <h1>
+                                    {{info.textoAnuncio}}
+                                </h1>
+                                <ng-container *ngIf="info.valores.compra == 0 && info.valores.aluguelDia >= 1">
+                                    <h3>
+                                        Disponivel para aluguel
+                                    </h3>
+                                </ng-container>
+                                <ng-container *ngIf="info.valores.compra >= 1 && info.valores.aluguelDia == 0">
+                                    <h3>
+                                        Disponivel para Compra
+                                    </h3>
+                                </ng-container>
+                                <ng-container *ngIf="info.valores.compra >= 1 && info.valores.aluguelDia >= 1">
+                                    <h3>
+                                        Disponivel para Compra e aluguel
+                                    </h3>
+                                </ng-container>
+                                <button type="button" routerLink="/concessionaria/page/aluguel/{{info.id}}">
+                                    Ver detalhes
+                                </button>
+                            </div>
                         </div>
-                        <div class="textCard">
-                            <h1>
-                                {{info.textoAnuncio}}
-                            </h1>
-                            <ng-container *ngIf="info.valores.compra == 0 && info.valores.aluguelDia >= 1">
-                                <h3>
-                                    Disponivel para aluguel
-                                </h3>
-                            </ng-container>
-                            <ng-container *ngIf="info.valores.compra >= 1 && info.valores.aluguelDia == 0">
-                                <h3>
-                                    Disponivel para Compra
-                                </h3>
-                            </ng-container>
-                            <ng-container *ngIf="info.valores.compra >= 1 && info.valores.aluguelDia >= 1">
-                                <h3>
-                                    Disponivel para Compra e aluguel
-                                </h3>
-                            </ng-container>
-                            <button type="button" routerLink="/concessionaria/page/aluguel/{{info.id}}">
-                                Ver detalhes
-                            </button>
-                        </div>
-                    </div>
+                    </ng-container>
                 </ng-container>
-            </ng-container>
+            </div>
         </div>
+
     </ng-container>
 </section>

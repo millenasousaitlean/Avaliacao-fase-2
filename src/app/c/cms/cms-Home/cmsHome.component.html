@@ -1,0 +1,456 @@
+<div class="section">
+    <ng-container *ngIf="router.url.includes('cms/table/carros')">
+        <div class="new">
+            <img src="../../../../assets/table/criar.png" alt="" routerLink="/cms/table/new/carros/0">
+        </div>
+        <app-tabela [classTable]="'section'" [tituloTable]="'Carros'" [cols]="colsCarros" [conteudo]="carros"
+            (openModalInfo)="getInfosModalCar($event)" (deletar)="deletarCarro($event)" 
+            (editar)="getCar($event)"></app-tabela>
+    </ng-container>
+
+
+    <ng-container *ngIf="router.url.includes('cms/table/modelosDeCarros')">
+        <div class="new">
+            <img src="../../../../assets/table/criar.png" alt="" routerLink="/cms/table/new/modelosDeCarros/0">
+        </div>
+        <app-tabela [classTable]="'section'" [tituloTable]="'Modelo de Carros'" [cols]="colsModelos"
+            [conteudo]="modelosDeCarros" (openModalInfo)="getInfosModalModelo($event)" (deletar)="deletarModelo($event)" (editar)="getModelos($event)"></app-tabela>
+    </ng-container>
+
+
+    <ng-container *ngIf="router.url.includes('cms/table/marcas')">
+        <div class="new">
+            <img src="../../../../assets/table/criar.png" alt="" routerLink="/cms/table/new/marcas/0">
+        </div>
+        <app-tabela [classTable]="'section'" [tituloTable]="'Marcas'" [cols]="colsMarcas" [conteudo]="marcas"
+            (openModalInfo)="getInfosModalMarca($event)" (deletar)="deletarMarca($event)"
+            (editar)="getMarca($event)"></app-tabela>
+    </ng-container>
+
+
+    <ng-container *ngIf="router.url.includes('cms/table/usuarios')">
+        <div class="new">
+            <img src="../../../../assets/table/criar.png" alt="" routerLink="/cms/table/new/usuarios/0">
+        </div>
+        <app-tabela [classTable]="'section'" [tituloTable]="'Usuarios'" [cols]="colsUsuarios" [conteudo]="usuarios"
+            (openModalInfo)="getInfosModalUsuarios($event)" (deletar)="deletarUsuario($event)"
+            (editar)="getUsers($event)"></app-tabela>
+    </ng-container>
+</div>
+
+
+<div class="containerCont">
+    <ng-container *ngIf="router.url.includes('cms/table/conteudoSite')">
+        <form [formGroup]="formConteudoSite">
+            <div class="conteudoSite">
+
+                <div class="titulo">
+                    <h1>
+                        Conteudo Site
+                    </h1>
+                </div>
+                <div class="contInfos">
+                    <div class="contConteSite">
+                        <label for="">
+                            Texto marca
+                        </label>
+                        <input type="text" formControlName="textoMarca">
+                    </div>
+                    <div class="contConteSite">
+                        <label for="">
+                            Texto modelo
+                        </label>
+                        <input type="text" formControlName="textoModelo">
+                    </div>
+                    <div class="contConteSite">
+                        <label for="">
+                            Texto sugestão
+                        </label>
+                        <input type="text" formControlName="sugestao">
+                    </div>
+                    <div class="contBtn">
+                        <button type="button" (click)="editarConteSite()">
+                            Salvar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-container>
+</div>
+
+
+<ng-container *ngIf="openModalCar">
+    <div class="modal">
+        <div class="containerModalCarros">
+            <h4>
+                <i class="fa fa-times" aria-hidden="true" (click)="closeModalCar()"></i>
+            </h4>
+            <div class="all">
+                <div class="titulo">
+                    <h1>
+                        Carro
+                    </h1>
+                </div>
+                <div class="allInfos">
+                    <div class="infoLinha">
+                        <h1>
+                            ID:
+                        </h1>
+                        <h3>
+                            {{car.id}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Marca:
+                        </h1>
+                        <h3>
+                            {{nameMarca(car.marca)}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Modelo:
+                        </h1>
+                        <h3>
+                            {{nameModelo(car.modelo)}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Ano:
+                        </h1>
+                        <h3>
+                            {{car.ano}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Texto anúncio:
+                        </h1>
+                        <h3>
+                            {{car.textoAnuncio}}
+                        </h3>
+                    </div>
+                    <div class="infoLinhaAcessorios">
+                        <h1>
+                            Complemento anúncio:
+                        </h1>
+                        <h3>
+                            {{car.complementoAnuncio}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Quilometragem:
+                        </h1>
+                        <h3>
+                            {{car.quilometragem}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Cambio:
+                        </h1>
+                        <h3>
+                            {{car.cambio}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Cor:
+                        </h1>
+                        <h3>
+                            {{car.cor}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Combustivel:
+                        </h1>
+                        <h3>
+                            {{car.combustivel}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Categoria:
+                        </h1>
+                        <h3>
+                            {{car.categoria}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Motor:
+                        </h1>
+                        <h3>
+                            {{car.motor}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Portas:
+                        </h1>
+                        <h3>
+                            {{car.portas}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Final da placa:
+                        </h1>
+                        <h3>
+                            {{car.finalPlaca}}
+                        </h3>
+                    </div>
+                    <div class="infoLinhaAcessorios">
+                        <h1>
+                            Acesssórios:
+                        </h1>
+                        <h3>
+                            {{car.acessorios}}
+                        </h3>
+                    </div>
+                    <div class="title">
+                        <h1>
+                            Valores
+                        </h1>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Compra:
+                        </h1>
+                        <h3>
+                            {{formateValor(car.valores.compra)}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Parcelas maximas:
+                        </h1>
+                        <h3>
+                            {{car.valores.parcelasMaximas}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Juros mensais:
+                        </h1>
+                        <h3>
+                            {{car.valores.jurosMensais}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Aluguel dia:
+                        </h1>
+                        <h3>
+                            {{formateValor(car.valores.aluguelDia)}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Aluguel mês:
+                        </h1>
+                        <h3>
+                            {{formateValor(car.valores.aluguelMes)}}
+                        </h3>
+                    </div>
+                    <div class="title">
+                        <h1>
+                            Imagens :
+                        </h1>
+                    </div>
+                    <div class="conteImg">
+                        <div class="verImgs">
+                            <img src="{{car.imagens[0]}}" alt="">
+                            <img src="{{car.imagens[1]}}" alt="">
+                            <img src="{{car.imagens[2]}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="openModalModelo">
+    <div class="modal">
+        <div class="containerModalModelo">
+            <h4>
+                <i class="fa fa-times" aria-hidden="true" (click)="closeModalModelo()"></i>
+            </h4>
+            <div class="all">
+                <div class="titulo">
+                    <h1>
+                        Modelo
+                    </h1>
+                </div>
+                <div class="todasInfos">
+                    <div class="textInfos">
+                        <div class="infoLinha">
+                            <h1>
+                                ID:
+                            </h1>
+                            <h3>
+                                {{modelos.id}}
+                            </h3>
+                        </div>
+                        <div class="infoLinha">
+                            <h1>
+                                Modelo:
+                            </h1>
+                            <h3>
+                                {{modelos.modelo}}
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="imgInfo">
+                        <img src="{{modelos.imagem}}" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="openModalMarca">
+    <div class="modal">
+        <div class="containerModalModelo">
+            <h4>
+                <i class="fa fa-times" aria-hidden="true" (click)="closeModalMarca()"></i>
+            </h4>
+            <div class="all">
+                <div class="titulo">
+                    <h1>
+                        Marca
+                    </h1>
+                </div>
+                <div class="todasInfos">
+                    <div class="textInfos">
+                        <div class="infoLinha">
+                            <h1>
+                                ID:
+                            </h1>
+                            <h3>
+                                {{marca.id}}
+                            </h3>
+                        </div>
+                        <div class="infoLinha">
+                            <h1>
+                                Marca:
+                            </h1>
+                            <h3>
+                                {{marca.marca}}
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="imgInfoMarca">
+                        <img src="{{marca.imagem}}" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="openModalUser">
+    <div class="modal">
+        <div class="containerModalUser">
+            <h4>
+                <i class="fa fa-times" aria-hidden="true" (click)="closeModalUser()"></i>
+            </h4>
+            <div class="all">
+                <div class="titulo">
+                    <h1>
+                        Usuario
+                    </h1>
+                </div>
+
+                <div class="textInfos">
+                    <div class="infoLinha">
+                        <h1>
+                            ID usuario:
+                        </h1>
+                        <h3>
+                            {{usuario.id}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            ID login:
+                        </h1>
+                        <h3>
+                            {{fazLogin.id}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Nome Completo:
+                        </h1>
+                        <h3>
+                            {{usuario.nomeCompleto}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Username:
+                        </h1>
+                        <h3>
+                            {{fazLogin.username}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Senha:
+                        </h1>
+                        <h3>
+                            {{fazLogin.senha}}
+                        </h3>
+                    </div>
+                    <div class="infoLinha">
+                        <h1>
+                            Tipo:
+                        </h1>
+                        <h3>
+                            {{usuario.tipo}}
+                        </h3>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="openModalDelete">
+    <div class="modalEX">
+        <div class="containerModalEX">
+            <div class="textoModal">
+                <h1>
+                    Deseja mesmo exclur este item?
+                </h1>
+                <h3>
+                    Esta ação não poderá ser revertida
+                </h3>
+            </div>
+            <div class="btnsModal">
+                <button type="button" class="nao" (click)="closeModalDelete()">
+                    Não
+                </button>
+                <button type="button" class="yes" (click)="modalDelete(idDelete)">
+                    Sim
+                </button>
+
+
+            </div>
+        </div>
+    </div>
+</ng-container>

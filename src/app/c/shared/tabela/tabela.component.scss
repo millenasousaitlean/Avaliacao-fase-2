@@ -1,33 +1,71 @@
-.section{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-      
+    .section {
+        width: 1080px;
 
-    table{ 
-        width: 100%;
-        margin: 10px;
+        .containerFilho {
+            width: 100%;
+
+            .titulo {
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+
+
+                h1 {
+                    font-family: 'inter';
+                    font-size: 23px;
+                    font-weight: 600;
+                }
+            }
+
+            .tabela {
+                width: 100%;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                font-family: 'inter';
+                font-size: 16px;
+                font-weight: 400;
                 
-        th{
-            width: 100%;
-            font-family: 'inter';
-            font-size: 18px;
-            font-weight: 600;
+                table{
+                    border-collapse: collapse;
+                    width: 100%;
 
-        }
+                }
 
-        td{
-            width: 100%;
-            padding: 8px;
-            background-color: rgb(0, 0, 0);
-            font-family: 'inter';
-            font-size: 15px;
-            font-weight: 400;
+            }
 
-            
+
+            th {
+                // text-align: center;
+                font-weight: 500;
+                border-bottom: 1px solid black;
+            }
+
+            th,
+            td {
+                padding: 15px 5px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #D9D9D9;
+            }
+
+            td {
+                text-align: center;
+                #imgTd {
+
+                    width: 100px;
+                    height: 80px;
+                }
+
+                button {
+                    border: none;
+                    background: transparent;
+                    cursor: pointer;
+
+                    img {
+                        width: 25px;
+                    }
+                }
+            }
         }
     }
-}

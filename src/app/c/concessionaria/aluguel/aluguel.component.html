@@ -30,7 +30,7 @@
                             </h1>
                             <ng-container *ngIf="info.valores.compra > 1">
                                 <h3>
-                                    compra: {{formateValor(info.valores.compra)}}
+                                    Compra: {{formateValor(info.valores.compra)}}
                                 </h3>
                             </ng-container>
                             <ng-container *ngIf="info.valores.aluguelDia > 1 || info.valores.aluguelMes > 1">
@@ -83,19 +83,19 @@
                     </div>
                     <div class="infosCarroceria">
                         <div class="motor">
-                            <img src="/assets/aluguelInter/icone-motor 1.png" alt="">
+                            <img src="../../../../assets/aluguelInter/motor.png" alt="">
                             <h2>
                                 Motor: {{info.motor}}
                             </h2>
                         </div>
                         <div class="portas">
-                            <img src="/assets/aluguelInter/icone-porta 1.png" alt="">
+                            <img src="../../../../assets/aluguelInter/porta-do-carro.png" alt="">
                             <h2>
                                 Portas: {{info.portas}}
                             </h2>
                         </div>
                         <div class="placa">
-                            <img src="/assets/aluguelInter/icone-final-placa 1.png" alt="">
+                            <img src="../../../../assets/aluguelInter/placa-de-carro.png" alt="">
                             <h2>
                                 Final placa: {{info.finalPlaca}}
                             </h2>
@@ -177,7 +177,7 @@
                                     <select id="selectModal" (change)="pegarInfosTabela($event)">
                                         <option value=""></option>
                                         <ng-container *ngFor="let p of selectParcelas; let i = index">
-                                            <option value="{{p}}">{{p}}</option>
+                                            <option value="{{p}}">{{p}}x</option>
                                         </ng-container>
                                     </select>
                                 </div>
@@ -196,33 +196,43 @@
                                                 </th>
                                             </tr>
                                             <tr>
-                                                <ng-container *ngFor=" let p of arraysModal; let i = index">
+                                                <ng-container *ngFor=" let p of arraysModal">
                                                     <td>
                                                         <ng-container *ngFor="let parcela of p.parcelasVariavel">
                                                             <div>
                                                                 {{parcela}}
                                                             </div>
 
-                                                            <hr width="225%">
+                                                            <hr width="150%">
                                                         </ng-container>
                                                     </td>
                                                     <td>
                                                         <ng-container
-                                                            *ngFor=" let parcela of p.valorVeiculoComJuros; let i = index ">
+                                                            *ngFor=" let valorParcela of p.valorCarroComJuros">
                                                             <div>
-                                                                {{formateValor(parcela / parcelasVariavel.length)}}
+                                                                <ng-container *ngIf="p.parcelasVariavel.length == 1">
+                                                                    {{formateValor(valorTotalCarro)}}
+                                                                </ng-container>
+                                                                <ng-container *ngIf="p.parcelasVariavel.length != 1">
+                                                                    {{formateValor(veiculoComJuros /
+                                                                p.parcelasVariavel.length)}}
+                                                                </ng-container>                                                                
                                                             </div>
-                                                            <hr width="200%"
-                                                                *ngIf="p.valorVeiculoComJuros.lastIndexOf(-1)">
-
+                                                            <hr width="150%">
                                                         </ng-container>
                                                     </td>
                                                     <td>
-                                                        <ng-container *ngFor="let parcela of p.parcelasVariavel">
+                                                        <ng-container *ngFor="let parcela of p.valorCarroComJuros">
+                                                            
                                                             <div>
-                                                                {{formateValor(valorDaParcela * parcela)}}
+                                                                <ng-container *ngIf="p.parcelasVariavel.length == 1">
+                                                                    {{formateValor(valorTotalCarro)}}
+                                                                </ng-container>
+                                                                <ng-container *ngIf="p.parcelasVariavel.length != 1">
+                                                                    {{formateValor(parcela )}}
+                                                                </ng-container>
                                                             </div>
-
+                                                            <hr width="100%">
                                                         </ng-container>
                                                     </td>
                                                 </ng-container>
@@ -232,7 +242,12 @@
                                 </div>
                                 <div class="valorTotal">
                                     <h2>
-                                        Valor total de {{formateValor(valorComJuros)}}
+                                        <ng-container *ngIf="parcelasVariavel.length == 1">
+                                            {{formateValor(valorTotalCarro)}}
+                                        </ng-container>
+                                        <ng-container *ngIf="parcelasVariavel.length != 1">
+                                            Valor total de {{formateValor(veiculoComJuros)}}
+                                        </ng-container>
                                     </h2>
                                 </div>
                             </div>
@@ -283,22 +298,22 @@
                                     <div class="valores">
                                         <ng-container *ngIf="+qtdDias <= 30">
                                             <h3>
-                                                Valor por dia R$ {{formateValor(aluguelDia)}}
+                                                Valor por dia: {{formateValor(aluguelDia)}}
                                             </h3>
                                         </ng-container>
                                         <ng-container *ngIf=" +qtdDias > 30">
                                             <h3>
-                                                Valor por mês R$ {{formateValor(aluguelMes)}}
+                                                Valor por mês: {{formateValor(aluguelMes)}}
                                             </h3>
                                         </ng-container>
                                         <ng-container *ngIf="+qtdDias <= 30">
                                             <h3>
-                                                Valor total de {{formateValor(valorAluguelDia)}}
+                                                Valor total de: {{formateValor(valorAluguelDia)}}
                                             </h3>
                                         </ng-container>
                                         <ng-container *ngIf=" +qtdDias > 30">
                                             <h3>
-                                                Valor total de {{formateValor(valorAluguelMes)}}
+                                                Valor total de: {{formateValor(valorAluguelMes)}}
                                             </h3>
                                         </ng-container>
                                     </div>
@@ -314,20 +329,20 @@
 
 <ng-container *ngIf="openModal == true">
     <section class="sectionModalLogin">
-        <div class="containerModalLogin">        
-                <div class="textoModal">
-                    <h1>
+        <div class="containerModalLogin">
+            <div class="textoModal">
+                <h1>
                     Login necessario para realizar simulação!
-                    </h1>
-                </div>
-                <div class="btnModal">
-                    <button type="button" class="closeModal" (click)="closeModalLogin()">
-                        Fechar
-                    </button>
-                    <button type="button" class="loginModal" (click)="loginModal()">
-                        Fazer login
-                    </button>
-                </div>           
+                </h1>
+            </div>
+            <div class="btnModal">
+                <button type="button" class="closeModal" (click)="closeModalLogin()">
+                    Fechar
+                </button>
+                <button type="button" class="loginModal" (click)="loginModal()">
+                    Fazer login
+                </button>
+            </div>
         </div>
     </section>
 </ng-container>

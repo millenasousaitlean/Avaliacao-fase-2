@@ -4,16 +4,27 @@
     </div>
     <div class="menuTabelas">
         <ul>
-            <li><a href="">Carros</a></li>
-            <li><a href="">Modelo de carros</a></li>
-            <li><a href="">Marcas</a></li>
-            <li><a href="">Usuários</a></li>
+            <li>
+                <a routerLink="cms/table/carros">Carros</a>
+            </li>
+            <li>
+                <a routerLink="cms/table/modelosDeCarros" >Modelo de carros</a>
+            </li>
+            <li>
+                <a routerLink="cms/table/marcas" >Marcas</a>
+            </li>
+            <li>
+                <a routerLink="cms/table/usuarios" >Usuários</a>
+            </li>
+            <li>
+                <a routerLink="cms/table/conteudoSite" >Conteudo site</a>
+            </li>            
         </ul>
     </div>
     <div class="logout">
-        <h1>
+        <h1 (click)="deslogar()">
             Logout
         </h1>
-        <img src="../../../../assets/navBar/conecte-se 1.png" alt="">
+        <img src="../../../../assets/navBar/conecte-se 1.png" alt="" (click)="deslogar()">
     </div>
 </section>

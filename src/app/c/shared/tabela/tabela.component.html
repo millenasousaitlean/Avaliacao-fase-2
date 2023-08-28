@@ -1,14 +1,61 @@
 <div class="{{classTable}}">
-    <table>
-        <tr>
-            <th *ngFor="let nome of colunaTabela">
-                {{nome}}
-            </th>
-        </tr>
-        <tr>
-            <td *ngFor="let info linhasTabela">
-                {{info}}
-            </td>
-        </tr>
-    </table>
+    <div class="containerFilho">
+        <div class="titulo">
+            <h1>
+                {{tituloTable}}
+            </h1>
+        </div>
+        <div class="tabela">
+            <table>
+                <tr>
+                    <ng-container *ngFor="let col of cols">
+                        <th>
+                            {{col.descricao}}
+                        </th>
+                    </ng-container>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <tr *ngFor="let item of conteudo">
+                    <ng-container *ngFor="let col of cols">
+                        <td *ngIf="col.type == 'texto'">
+                            {{getValue(col.name, item)}}
+                        </td>
+                        <td *ngIf="col.type == 'number'">
+                            <ng-container *ngIf="col.name == 'marca'">
+                                {{getValue(col.name, item)}}
+                            </ng-container>
+                            <ng-container *ngIf="col.name == 'modelo'">
+                                {{getValue(col.name, item)}}
+                            </ng-container>
+                        </td>
+                        <td *ngIf="col.type == 'imagem'">
+                            <img id="imgTd" src="{{getValue(col.name, item)}}" alt="">
+                        </td>
+                    </ng-container>
+                    <td>
+                        <button type="button" (click)="openInfo(item.id)">
+                            <img src="../../../../assets/table/ver.png" alt="">
+                        </button>
+
+                    </td>
+                    <td>
+                        <button type="button" (click)="editarInfos(item.id)">
+                            <img src="../../../../assets/table/editar.png" alt="">
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" (click)="deletarInfo(item.id)">
+                            <img src="../../../../assets/table/delete.png" alt="">
+                        </button>
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+
 </div>

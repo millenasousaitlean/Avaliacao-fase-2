@@ -5,31 +5,35 @@
         </h1>
         <form [formGroup]="formLogin" *ngIf="!isLoading">
             <div class="containerInputs">
-                <label for="">Username</label>
-                <input type="text" placeholder="Username" class="transparentPlaceholder" id="userInput" formControlName="login" [ngClass]="{ 'invalid': (formLogin.controls['login'].status == 'INVALID' 
-                && formLogin.controls['login'].touched) }">
+                <label class="userLabel">Username</label>
                 <small *ngIf="formLogin.controls['login'].status == 'INVALID' && formLogin.controls['login'].touched">
                     Campo Inválido!
                 </small>
+                <input type="text" placeholder="Username" class="inputUsername" id="userInput"
+                    formControlName="login" [ngClass]="{ 'invalid': (formLogin.controls['login'].status == 'INVALID' 
+                && formLogin.controls['login'].touched) }">
             </div>
             <div class="containerInputs">
-                <label for="">Senha</label>
-                <input type="password" placeholder="Senha" class="transparentPlaceholder" formControlName="senha" [ngClass]="{ 'invalid': (formLogin.controls['senha'].status == 'INVALID' 
-                && formLogin.controls['senha'].touched) }">
+                <label class="senhaLabel">Senha</label>
                 <small *ngIf="formLogin.controls['senha'].status == 'INVALID' && formLogin.controls['senha'].touched">
                     Campo Inválido!
                 </small>
+                <input type="password" placeholder="Senha" class="inputSenha" formControlName="senha"
+                    [ngClass]="{ 'invalid': (formLogin.controls['senha'].status == 'INVALID' 
+                && formLogin.controls['senha'].touched) }">
+            </div>
+            <div class="containerBtn">
+                <button type="button" [disabled]="formLogin.status === 'INVALID'" (click)="fazerLogin()">
+                    Entrar
+                </button>
             </div>
         </form>
-        <div class="containerInputs">
-            <app-buttons [textBtn]="'Entrar'" [btnClass]="'btnLogin'"  (clickNoButton)="acessarLogin()" ></app-buttons>
-        </div>
 
         <div class="textCriarConta">
             <h3>
-                Ainda não tem conta?
+                Ainda não tem conta ?
             </h3>
-            <a href="/concessionaria/page/singUp">Crie aqui!</a>
+            <a href="/concessionaria/page/singUp"> Crie aqui!</a>
         </div>
     </div>
 </section>
@@ -41,7 +45,7 @@
                 {{errorLogin}}
             </h1>
             <h2>
-                Verifique se o login e/ou a senha estão correto
+                Verifique se o login e/ou a senha estão corretos
             </h2>
             <button class="btnClose" type="button" (click)="fecharModal()">
                 Fechar
@@ -49,3 +53,13 @@
         </div>
     </div>
 </section>
+
+<ng-container *ngIf="isLoading">
+    <section id="modal-loading">
+        <div class="card-loading">
+            <div>
+                <span class="loading-word"></span>
+            </div>
+        </div>
+    </section>
+</ng-container>

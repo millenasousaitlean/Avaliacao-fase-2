@@ -31,9 +31,9 @@ export class AluguelComponent implements OnInit {
   // MODAL COMPRA
   juros: number = 0
   qtdParcelas: number = 0;
-  valorTotalCompra: number = 0;
-  valorComJuros: number = 0
-  valorDaParcela: number = 0
+  valorTotalCarro: number = 0;
+  valorCarroComJuros: number[] = []
+  valorDaParcela: number[] = []
   novaQtdParcelas: string = ''
 
   valorVeiculoComJuros: number[] = []
@@ -150,14 +150,14 @@ export class AluguelComponent implements OnInit {
       let carrosAleatorios: Carros[] = []
       this.carrosRand = []
       carrosAleatorios = data
-      for (let i = 0; i < 4; i++) {
-        let n = Math.floor(Math.random() * carrosAleatorios.length)
+      for (let i = 0; i <= 3; i++) {
+        let n = Math.floor(Math.random() * carrosAleatorios.length )
         let rec = carrosAleatorios.splice(n, 1)[0]
-        if (rec.id == this.car.id) {
+        if (rec.id == this.car.id ){
           n = Math.floor(Math.random() * carrosAleatorios.length)
           rec = carrosAleatorios.splice(n, 1)[0]
-        }
-        this.carrosRand.push(rec)
+        }     
+          this.carrosRand.push(rec)       
       }
     })
   }
@@ -222,7 +222,7 @@ export class AluguelComponent implements OnInit {
 
   valorParcela() {
     this.apiCarros.getCarrosPorId(this.idDaUrl).subscribe((data) => {
-      this.valorTotalCompra = data.valores.compra
+      this.valorTotalCarro = data.valores.compra
       this.apiCarros.getCarrosPorId(this.idDaUrl).subscribe((data) => {
         this.qtdParcelas = data.valores.parcelasMaximas
         for (let i = 1; i <= this.qtdParcelas; i++) {
@@ -231,9 +231,14 @@ export class AluguelComponent implements OnInit {
       })
     })
   }
+
+  veiculoComJuros: number = 0
+  totalJuros: number[] = []
+
   pegarInfosTabela(evalue: Event): void {
     this.parcelasVariavel = []
-    this.valorVeiculoComJuros = []
+    this.valorCarroComJuros = []
+    this.valorDaParcela = []
     this.apiCarros.getCarrosPorId(this.idDaUrl).subscribe((data) => {
       this.juros = data.valores.jurosMensais
       this.novaQtdParcelas = (evalue.target as HTMLSelectElement).value;
@@ -245,24 +250,27 @@ export class AluguelComponent implements OnInit {
         this.parcelasVariavel.push(i)
 
         // calculo valor do veiculo com juros
-        let f = this.juros / 100
-        let jurosDoVeiculo = f * this.valorTotalCompra
-        this.valorComJuros = this.valorTotalCompra + jurosDoVeiculo
-        this.valorVeiculoComJuros.push(this.valorComJuros)
+        let j = this.juros * this.parcelasVariavel.length             
+        this.veiculoComJuros = j * this.valorTotalCarro
+        this.valorCarroComJuros.push(this.veiculoComJuros)
+
 
         // valor variavel da parcela
-        this.valorDaParcela = this.valorComJuros / this.parcelasVariavel.length
+        let parce = this.veiculoComJuros / this.parcelasVariavel.length
+        this.valorDaParcela.push(parce)
 
-      }
+      }     
       // array de arrays para ser usado no ngFor
       this.arraysModal = [{
-        valorVeiculoComJuros: this.valorVeiculoComJuros,
-        parcelasVariavel: this.parcelasVariavel
+        valorCarroComJuros: this.valorCarroComJuros,
+        parcelasVariavel: this.parcelasVariavel,
+        valorDaParcela: this.valorDaParcela
       }]
       this.selectParcelas = []
     })
-    this.valorParcela()
+    this.valorParcela()    
   }
+  
   formateValor(valor: number): string {
     let opcoes = {
       style: 'currency',
@@ -293,9 +301,6 @@ export class AluguelComponent implements OnInit {
       let p = this.aluguelMes / 30
       this.valorAluguelMes = p * +this.qtdDias
     }
-
-    console.log('valor dia', this.valorAluguelDia)
-    console.log('valor mes', this.valorAluguelMes)
     this.getsInfosAluguel()
   }
 

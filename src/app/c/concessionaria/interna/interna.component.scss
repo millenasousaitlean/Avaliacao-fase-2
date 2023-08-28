@@ -2,7 +2,23 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 168px;
+    // padding: 0 0 118px 0 ;
+
+    .containerTudoModelo {
+        margin-top: -120px;
+        margin-bottom: 120px;
+        width: 100%;
+    }
+
+    .containerTudoMarca{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
 
     .containerTitulo {
         display: flex;
@@ -76,7 +92,8 @@ section {
                     font-weight: 400;
                     margin-bottom: 20px;
                 }
-                button{
+
+                button {
                     width: 210px;
                     background: #FF7A00;
                     padding: 8px 45px;
@@ -88,14 +105,51 @@ section {
                     border-radius: 7px;
                     animation: 0.4s;
                     cursor: pointer;
-                
+
                 }
-                button:hover{
+
+                button:hover {
                     scale: 1.05;
                     background: #ffc401;
                 }
             }
         }
+    }
+}
+
+
+
+@media(max-width: 670px) {
+
+    .containerTitulo {
+        h1 {
+            font-size: 20px !important;
+        }
+
+        h4 {
+            font-size: 16px !important;
+        }
+    }
+
+    .containerCards {
+        width: 90% !important;
+
+    }
+
+    .containerTudoModelo {
+        margin-top: -160px !important;
+        margin-bottom: -80px !important;
+
+        .cardInterna {
+            margin-left: 50px !important;
+
+        }
+
+    }
+
+    .containerTudoMarca{
+        margin-bottom: -180px !important;
+        
     }
 
 

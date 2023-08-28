@@ -1,4 +1,5 @@
 section {
+    width: 100%;
 
     .banner {
         width: 100%;
@@ -7,7 +8,6 @@ section {
         img {
             width: 100%;
             height: 100%;
-            background-size: cover;
         }
     }
 
@@ -47,9 +47,10 @@ section {
         margin-top: 100px;
         margin-bottom: 120px;
 
-        .tituloModelos{
+        .tituloModelos {
             display: flex;
             justify-content: center;
+            text-align: center;
             font-family: 'inter';
             font-size: 30px;
             margin-bottom: 40px;
@@ -64,7 +65,60 @@ section {
             gap: 50px;
         }
     }
+}
+
+// MEDIA QUERY .................................................
+
+@media(max-width: 380px) {
+
+    .section {
+
+        .containerCardMarcas {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            gap: 10px;
+        }
+
+        .containerCardModelos {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
 
 
+    }
+
+
+
+
+}
+
+@media(max-width: 670px) {
+
+    .containerCardMarcas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        gap: 65px;
+    }
+
+    .containerCardModelos {
+        gap: 65px;
+    }
+
+    .tituloModelos {        
+        width: 200px !important;
+        word-wrap: break-word !important;
+    }
 
 }

@@ -1,0 +1,315 @@
+<section>
+
+    <ng-container *ngIf="router.url.includes('cms/table/new/carros') ">
+        <div class="container">
+            <div class="contText">
+                <h1>
+                    Criar novo item
+                </h1>
+            </div>
+            <form [formGroup]="formCarros">
+                <div class="contInfos">
+
+                    <div class="contInputs">
+                        <label for="">
+                            Marca
+                        </label>
+                        <select name="" id="" formControlName="marca">
+                            <option value=""></option>
+                            <ng-container *ngFor="let mark of infoMarca">
+                                <option value="mark.id">{{mark.marca}}</option>
+                            </ng-container>
+                        </select>
+                    </div>
+                    <div class="contInputs">
+                        <label for="">
+                            Modelo
+                        </label>
+                        <select name="" id="" formControlName="modelo">
+                            <option value=""></option>
+                            <ng-container *ngFor="let mode of infoModelos">
+                                <option value="mode.id">{{mode.modelo}}</option>
+                            </ng-container>
+                        </select>
+                    </div>
+                    <div class="contInputs">
+                        <label for="">
+                            Ano
+                        </label>
+                        <input type="number" formControlName="ano">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Texto anúncio
+                        </label>
+                        <input type="text" formControlName="textoAnuncio">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Complemento anúncio
+                        </label>
+                        <input type="text" formControlName="complementoAnuncio">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Quilometragem
+                        </label>
+                        <input type="number" formControlName="quilometragem">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Cambio
+                        </label>
+                        <select name="" id="" formControlName="cambio">
+                            <option value=""></option>
+                            <option value="Manual">Manual</option>
+                            <option value="Automático">Automático</option>
+                        </select>
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Cor
+                        </label>
+                        <input type="text" formControlName="" formControlName="cor">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Combustivel
+                        </label>
+                        <input type="text" formControlName="combustivel">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Categoria
+                        </label>
+                        <input type="text" formControlName="categoria">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Motor
+                        </label>
+                        <input type="text" formControlName="motor">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Portas
+                        </label>
+                        <input type="number" formControlName="portas">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Final da placa
+                        </label>
+                        <input type="number" formControlName="finalPlaca">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Acessorios
+                        </label>
+                        <input type="text" formControlName="acessorios">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Valor compra
+                        </label>
+                        <input type="number" formControlName="compra">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Quantidade maxíma de parcelas
+                        </label>
+                        <input type="number" formControlName="parcelasMaximas">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Juros mensal
+                        </label>
+                        <input type="number" formControlName="jurosMensais">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Valor aluguel dia
+                        </label>
+                        <input type="number" formControlName="aluguelDia">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Valor aluguel mês
+                        </label>
+                        <input type="number" formControlName="aluguelMes">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            Link imagem da frente do veículo
+                        </label>
+                        <input type="text" formControlName="imagem1">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            link imagem interna do veículo
+                        </label>
+                        <input type="text" formControlName="imagem2">
+                    </div>
+
+                    <div class="contInputs">
+                        <label for="">
+                            link imagem posterior do veículo
+                        </label>
+                        <input type="text" formControlName="imagem3">
+                    </div>
+                    <div class="contBtn">                    
+                             <button type="button" (click)="addConteudoCar()">
+                            criar
+                        </button>                                        
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="router.url.includes('cms/table/new/modelosDeCarros')">
+        <div class="container">
+            <div class="contText">
+                <h1>
+                    Criar novo item
+                </h1>
+            </div>
+            <form [formGroup]="formModelos">
+                <div class="contInfos">
+                    <div class="contInputs">
+                        <label for="">
+                            Modelo
+                        </label>
+                        <input type="text" formControlName="modelo">
+                    </div>
+                    <div class="contInputs">
+                        <label for="">
+                            Link imagem do modelo
+                        </label>
+                        <input type="text" formControlName="imagem">
+                    </div>
+                    <div class="contBtn">
+                        <button type="button" (click)="addConteudoModelo()">
+                            criar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="router.url.includes('cms/table/new/marcas')">
+        <div class="container">
+            <div class="contText">
+                <h1>
+                    Criar novo item
+                </h1>
+            </div>
+            <form [formGroup]="formMarcas">
+                <div class="contInfos">
+                    <div class="contInputs">
+                        <label for="">
+                            Marca
+                        </label>
+                        <input type="text" formControlName="marca">
+                    </div>
+                    <div class="contInputs">
+                        <label for="">
+                            Link imagem da marca
+                        </label>
+                        <input type="text" formControlName="imagem">
+                    </div>
+                    <div class="contBtn">
+                        <button type="button" (click)="addConteudoMarca()">
+                            criar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="router.url.includes('cms/table/new/usuarios')">
+        <div class="container">
+            <div class="contText">
+                <h1>
+                    Criar novo usuario
+                </h1>
+            </div>
+            <form [formGroup]="formUsuarios">
+                <div class="contInfos">
+                    <div class="contInputs">
+                        <label for="">
+                            Nome completo
+                        </label>
+                        <input type="text" formControlName="nomeCompleto">
+                    </div>
+                    <div class="contInputs">
+                        <label for="">
+                            Username
+                        </label>
+                        <input type="text" formControlName="username">
+                    </div>
+                    <div class="contInputs">
+                        <label for="">
+                            Senha
+                        </label>
+                        <input type="text" formControlName="senha">
+                    </div>
+                    <div class="contInputs">
+                        <label for="">
+                            Tipo
+                        </label>
+                        <select name="" id="" formControlName="tipo">
+                            <option value=""></option>
+                            <option value="cliente">Cliente</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="contBtn">
+                        <button type="button" (click)="addConteudoUsuario()">
+                            criar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ng-container>
+
+</section>
+
+<ng-container *ngIf="openModalAdd == true" >
+    <div class="modal">
+        <div class="contModal">
+            <div class="textModal">
+                <h1>
+                    Item incluido com sucesso!
+                </h1>
+            </div>
+            <div class="btnModal">               
+                  <button type="button" (click)="closeModal()">
+                    Sim
+                </button>                           
+            </div>
+        </div>
+    </div>
+</ng-container>

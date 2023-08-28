@@ -1,5 +1,5 @@
-footer{
-    background-color:#14181A;
+footer {    
+    background-color: #14181A;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -7,32 +7,73 @@ footer{
     width: 100%;
     height: 150px;
 
-    .logoAcesso{
+    .logoAcesso {
         display: flex;
         flex-direction: column;
         margin-left: 40px;
         gap: 30px;
 
-        img{
+        img {
             width: 180px;
             cursor: pointer;
         }
-        a{
+
+        a {
             font-family: 'inter';
             font-size: 14px;
             color: #FFFFFF;
         }
     }
 
-    .redes{
+    .redes {
         display: flex;
         flex-direction: row;
         margin-right: 40px;
         gap: 40px;
 
-        img{
+        img {
             width: 50px;
             cursor: pointer;
         }
     }
+}
+
+
+// MEDIA QUERY .................................................
+
+
+@media(max-width: 670px){
+
+    footer{
+        height: 180px;
+
+        flex-direction: column;
+        gap: 20px;
+
+        .logoAcesso{
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            margin-top: 20px;
+            gap: 70px;
+            img{
+                width: 120px;
+            }
+        }
+
+        .redes{
+            position: relative;
+            bottom: 50%;
+            left: 5%;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            img{
+                width: 30px;
+            }
+        }
+    }
+    
+    
 }

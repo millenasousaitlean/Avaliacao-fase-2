@@ -12,16 +12,15 @@ import { InternaComponent } from './c/concessionaria/interna/interna.component';
 import { AluguelComponent } from './c/concessionaria/aluguel/aluguel.component';
 import { LoginComponent } from './c/concessionaria/login/login.component';
 import { SingUpComponent } from './c/concessionaria/sing-up/sing-up.component';
-import { Tabela1Component } from './c/cms/tabela1/tabela1.component';
-import { EdicaoComponent } from './c/cms/edicao/edicao.component';
+import { Tabela1Component } from './c/cms/cms-Home/cmsHome.component';
 import { FooterComponent } from './c/shared/footer/footer.component';
 import { NavBarComponent } from './c/shared/nav-bar/nav-bar.component';
 import { NavLateralComponent } from './c/shared/nav-lateral/nav-lateral.component';
 import { TabelaComponent } from './c/shared/tabela/tabela.component';
 import { ButtonsComponent } from './c/shared/buttons/buttons.component';
-import { TitulosComponent } from './c/shared/titulos/titulos.component';
 import { CardComponent } from './c/shared/card/card.component';
 import { LoginAdmComponent } from './c/cms/login-adm/login-adm.component';
+import { AddInfoComponent } from './c/cms/add-info/add-info.component';
 
 @NgModule({
   declarations: [
@@ -32,15 +31,14 @@ import { LoginAdmComponent } from './c/cms/login-adm/login-adm.component';
     LoginComponent,
     SingUpComponent,
     Tabela1Component,
-    EdicaoComponent,
     FooterComponent,
     NavBarComponent,
     NavLateralComponent,
     TabelaComponent,
     ButtonsComponent,
-    TitulosComponent,
     CardComponent,
-    LoginAdmComponent
+    LoginAdmComponent,
+    AddInfoComponent
   ],
   imports: [
     BrowserModule,

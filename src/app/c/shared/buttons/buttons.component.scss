@@ -39,11 +39,11 @@
     background: #D22730;
     padding: 8px 45px;
     font-family: 'inter';
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     color: #ffffff;
     border: 1px solid #000000;
-    border-radius: 20px;
+    border-radius: 14px;
     margin-top: 40px;
     cursor: pointer;
 }
@@ -70,3 +70,21 @@
     color: #ffffff;
     scale: 1.02;
 }
+
+@media(max-width: 670px){
+    .btnSimulacao{
+        width: 300px;
+        height: 60px;       
+        font-size: 18px;       
+    }
+}
+
+@media(min-width:700px) and (max-width: 890px){
+    .btnSimulacao{
+        width: 660px;
+        height: 60px;       
+        font-size: 20px;       
+    }
+}
+
+

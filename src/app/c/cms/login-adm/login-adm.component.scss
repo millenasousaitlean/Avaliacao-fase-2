@@ -8,12 +8,13 @@ section {
 
     .containerLogin {
         background-color: #ffffff;
-        width: 50%;
-        height: 80%;
+        width: 40%;
+        height: 75%;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: -40px;
 
         h1 {
             margin-top: 20px;
@@ -22,30 +23,269 @@ section {
 
         }
 
-        .containerInputs {
+        form {
+            width: 100%;
             display: flex;
-            flex-direction: column;  
-                     
-            margin-top: 40px;
-            width: 90%;
+            justify-content: center;
+            align-items: center;
             
-
-            label {
-                margin-left: 10px;
-                font-family: 'inter';
-                font-size: 14px;
-                font-weight: 600;
+            .containerInputs {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                gap: 15px;
+                margin-top: 30px;
                 
+
+
+                label {
+                    margin-left: 10px;
+                    font-family: 'inter';
+                    font-size: 16px;
+                    font-weight: 600;
+
+                }
+
+                input {
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 13px;
+                    background: #F2F2F2;
+                    border: 1px solid #B8B8B8;
+                }
+
+                small {
+                    margin-left: 10px;
+                    font-family: 'roboto';
+                    font-size: 10px;
+                    font-weight: 600;
+                    color: red;
+
+                }
+
             }
-            input{
-                margin-top: 5px;
-                margin-bottom: 10px;
+
+            .containerBtn {
                 width: 100%;
-                height: 30px;
-                border-radius: 13px;
-                background: #F2F2F2;
-                border: 1px solid #B8B8B8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+
+                button {
+                    width: 100%;
+                    height: 50px;
+                    background: #D22730;
+                    padding: 8px 45px;
+                    font-family: 'inter';
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: #ffffff;
+                    border: 1px solid #000000;
+                    border-radius: 14px;
+                  
+                    cursor: pointer;
+                }
+
+                button:disabled {
+                    background: #c9313890;
+                    border: 1px solid #535050;
+                }
             }
         }
+
     }
+}
+
+#modal-error-login {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(19, 13, 13, 0.794);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+
+    .card-error {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        position: fixed;
+        z-index: 10;
+        left: 50%;
+        top: 50%;
+        width: 0%;
+        height: 0%;
+
+        .erro-login {
+            width: 600px;
+            padding: 65px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            // box-shadow: 0px 0px 15px 2px gray;
+            border: none;
+            border-radius: 20px;
+            gap: 20px;
+
+            h1 {
+                font-family: 'roboto';
+                font-weight: 600;
+                font-size: 20px;
+                color: rgba(255, 0, 0, 0.883);
+            }
+
+            h2 {
+                font-family: 'roboto';
+                font-weight: 500;
+                font-size: 16px;
+                color: rgb(47, 46, 65);
+            }
+
+            .btnClose {
+                margin-top: 30px;
+                width: 140px;
+                height: 30px;
+                font-family: 'roboto';
+                font-size: 15px;
+                font-weight: 500;
+                color: rgb(255, 255, 255);
+                border: 0.4px solid black;
+                background-color: rgb(228, 22, 22);
+                border: none;
+                border-radius: 20px;
+
+            }
+
+        }
+    }
+
+
+
+}
+
+#modal-loading {
+    display: block;
+    position: fixed;
+    z-index: 1;
+
+    background-color: rgba(34, 43, 50, 0.878);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .card-loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        position: fixed;
+        z-index: 10;
+        left: 50%;
+        top: 40%;
+        width: 0%;
+        height: 0%;
+
+    }
+
+
+    //   loading
+
+    .loading-word {
+        font-size: 48px;
+        color: #ffffff;
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .loading-word:before {
+        content: '';
+        animation: 4s print linear alternate infinite;
+    }
+
+    .loading-word:after {
+        content: '';
+        position: absolute;
+        right: -4px;
+        top: 50%;
+        transform: translatey(-45%);
+        width: 2px;
+        height: 1.3em;
+        background: currentColor;
+        opacity: 0.8;
+        animation: 0.6s blink steps(2) infinite;
+    }
+
+    @keyframes blink {
+        0% {
+            visibility: hidden;
+        }
+
+        100% {
+            visibility: visible;
+        }
+    }
+
+    @keyframes print {
+        0% {
+            content: 'L'
+        }
+
+        10% {
+            content: 'Lo'
+        }
+
+        20% {
+            content: 'Loa'
+        }
+
+        30% {
+            content: 'Load'
+        }
+
+        40% {
+            content: 'Loadi'
+        }
+
+        50% {
+            content: 'Loadin'
+        }
+
+        60% {
+            content: 'Loading'
+        }
+
+        70% {
+            content: 'Loading .'
+        }
+
+        80% {
+            content: 'Loading ..'
+        }
+
+        90%,
+        100% {
+            content: 'Loading ...'
+        }
+    }
+}
+
+
+
+.invalid {
+    border: 1px solid red !important;
 }

@@ -5,10 +5,10 @@ import { InternaComponent } from './c/concessionaria/interna/interna.component';
 import { AluguelComponent } from './c/concessionaria/aluguel/aluguel.component';
 import { LoginComponent } from './c/concessionaria/login/login.component';
 import { SingUpComponent } from './c/concessionaria/sing-up/sing-up.component';
-import { Tabela1Component } from './c/cms/tabela1/tabela1.component';
-import { EdicaoComponent } from './c/cms/edicao/edicao.component';
+import { Tabela1Component } from './c/cms/cms-Home/cmsHome.component';
 import { LoginAdmComponent } from './c/cms/login-adm/login-adm.component';
 import { AuthGuard } from './auth.guard';
+import { AddInfoComponent } from './c/cms/add-info/add-info.component';
 
 const routes: Routes = [
   {path: 'concessionaria/page/home', component: HomeComponent},
@@ -20,8 +20,19 @@ const routes: Routes = [
   {path: 'concessionaria/page/login', component: LoginComponent},
   {path: 'concessionaria/page/singUp', component: SingUpComponent},
   {path: 'page/loginAdm', component: LoginAdmComponent},
-  {path: 'cms/table1', component: Tabela1Component, canActivate: [AuthGuard]},
-  {path: 'cms/edicao', component: EdicaoComponent, canActivate: [AuthGuard]}
+  {path: 'cms/table/carros', component: Tabela1Component, canActivate: [AuthGuard]},
+  {path: 'cms/table/marcas', component: Tabela1Component, canActivate: [AuthGuard]},
+  {path: 'cms/table/modelosDeCarros', component: Tabela1Component, canActivate: [AuthGuard]},
+  {path: 'cms/table/usuarios', component: Tabela1Component, canActivate: [AuthGuard]},
+  {path: 'cms/table/conteudoSite', component: Tabela1Component, canActivate: [AuthGuard]},
+  {path: 'cms/table/new/carros/0', component: AddInfoComponent, canActivate: [AuthGuard]},
+  {path: 'cms/table/new/marcas/0', component: AddInfoComponent, canActivate: [AuthGuard]},
+  {path: 'cms/table/new/modelosDeCarros/0', component: AddInfoComponent, canActivate: [AuthGuard]},
+  {path: 'cms/table/new/usuarios/0', component: AddInfoComponent, canActivate: [AuthGuard]},  
+  {path: 'cms/table/new/carros/:id', component: AddInfoComponent, canActivate: [AuthGuard]},
+  {path: 'cms/table/new/marcas/:id', component: AddInfoComponent, canActivate: [AuthGuard]},
+  {path: 'cms/table/new/modelosDeCarros/:id', component: AddInfoComponent, canActivate: [AuthGuard]},
+  {path: 'cms/table/new/usuarios/:id', component: AddInfoComponent, canActivate: [AuthGuard]}
 
 ];
 

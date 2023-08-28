@@ -1,8 +1,9 @@
 export class ArraysModal {
 
     constructor(
-        public valorVeiculoComJuros: number[] = [],
-        public parcelasVariavel: number[] = []
+        public valorCarroComJuros: number[] = [],
+        public parcelasVariavel: number[] = [],
+        public valorDaParcela: number[] = []
         
     ){}
 

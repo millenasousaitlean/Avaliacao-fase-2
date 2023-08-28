@@ -13,8 +13,9 @@ import { UsuariosService } from 'src/app/service/concessionaria/usuarios.service
 export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
+  usuarios: FazerLogin[] = [];
+  infoUsuarios: Usuarios[] = [];
 
-  isLogin = false;
   isLoading = false;
   errorLogin: string = '';
   openModal = false;
@@ -35,67 +36,35 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.rotaAtiva.queryParams.subscribe(params => {
     })
-    this.fazerLogin()
   }
 
-  onLogin() {
-    
-    window.location.href = "http://localhost:4200/concessionaria/page/home"
-    return 
-  }
 
 
   fazerLogin(): void {
-    console.log('formLogin',this.formLogin)
-    this.isLogin = true;
 
-    this.apiUsuarios.getLogin(this.formLogin.value.login, this.formLogin.value.senha).subscribe({
-      next: (resposta) => {
-        if (resposta.length > 0) {
-          localStorage.setItem('user', JSON.stringify(resposta[0]))
-        } else {
-          alert('Usuario e/ou senha incorreto')
-        }
-      }, error: (erro) => {
-        console.log(erro)
-      }
-    })
-  }
+    this.apiUsuarios.getLogin(this.formLogin.value.login, this.formLogin.value.senha, "cliente").subscribe((data) => {
+      this.usuarios = data
+      this.apiUsuarios.getUsuariosLogin(this.formLogin.value.login).subscribe((resp) => {
+        this.infoUsuarios = resp
 
-  acessarLogin(): void {
-    const entrarLogin = {
-      login: this.formLogin.value.login,
-      senha: this.formLogin.value.senha
-    }
+        this.isLoading = true;
+        setTimeout(() => {
 
-    let usuarios: FazerLogin[] = []
-    this.apiUsuarios.getAllUsernames().subscribe((data) => {
-      usuarios = data
-    })
+          if (data.length > 0 && resp.length > 0) {
+            localStorage.setItem('user', JSON.stringify(data[0]))
+            localStorage.setItem('usuario', JSON.stringify(resp[0]))
 
-    this.isLoading = true;
-    setTimeout(() => {
-      const usuario: any = usuarios.find((user) => {
-        return user.username == entrarLogin.login && user.senha == entrarLogin.senha;
+            window.location.href = "http://localhost:4200/concessionaria/page/home"
+          } else {
+            this.isLoading = false;
+            this.openModal = true;
+            this.errorLogin = 'Ops... Ocorreu um erro!'
+          }
+        }, 1700)
+
       })
-      if (usuario) {
-        let usuarios: any = {
-          id: usuario.id,
-          username: this.formLogin.value.login,
-          senha: this.formLogin.value.login,
-          idUsuario: usuario.idUsuario
-        }
-        const user = (localStorage.setItem('user', JSON.stringify(usuario)) as unknown as string)
-        this.onLogin()
-      } else {
-        this.isLoading = false;
-        this.openModal = true;
-        this.errorLogin = 'Ops... Ocorreu um erro!'
-      }
-    }, 1500);
-    
+    })
   }
-
 
   fecharModal(): void {
     this.openModal = false

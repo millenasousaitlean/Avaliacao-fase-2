@@ -3,13 +3,58 @@
         <h1>
             Login
         </h1>
-        <div class="containerInputs">
-            <label for="">Username</label>
-            <input type="text" placeholder="Username">
-            <label for="">Senha</label>
-            <input type="text" placeholder="Senha">
-            <app-buttons [textBtn]="'Entrar'" [btnClass]="'btnLogin'"></app-buttons>
+        <form [formGroup]="formLoginAdm">
+            <div class="containerInputs">
+                <div >
+                    <label for="">Username</label>
+                    <small
+                        *ngIf="formLoginAdm.controls['login'].status == 'INVALID' && formLoginAdm.controls['login'].touched">
+                        Campo Inválido!
+                    </small>
+                    <input type="text" placeholder="Username" formControlName="login"  [ngClass]="{ 'invalid': (formLoginAdm.controls['login'].status == 'INVALID' 
+                    && formLoginAdm.controls['login'].touched) }">
+                </div>
+                <div >
+                    <label for="">Senha</label>
+                    <small
+                        *ngIf="formLoginAdm.controls['senha'].status == 'INVALID' && formLoginAdm.controls['senha'].touched">
+                        Campo Inválido!
+                    </small>
+                    <input type="password" placeholder="Senha" formControlName="senha" [ngClass]="{ 'invalid': (formLoginAdm.controls['senha'].status == 'INVALID' 
+                    && formLoginAdm.controls['senha'].touched) }">
+                </div>
+                <div class="containerBtn">
+                    <button type="button" [disabled]="formLoginAdm.status === 'INVALID'" (click)="fazerLoginAdm()">
+                        Entrar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section id="modal-error-login" *ngIf="openModal">
+    <div class="card-error">
+        <div class="erro-login" *ngIf="errorLogin">
+            <h1>
+                {{errorLogin}}
+            </h1>
+            <h2>
+                Verifique se o login e/ou a senha estão corretos
+            </h2>
+            <button class="btnClose" type="button" (click)="fecharModal()">
+                Fechar
+            </button>
         </div>
     </div>
 </section>
 
+<ng-container *ngIf="isLoading">
+    <section id="modal-loading">
+        <div class="card-loading">
+            <div>
+                <span class="loading-word"></span>
+            </div>
+        </div>
+    </section>
+</ng-container>
